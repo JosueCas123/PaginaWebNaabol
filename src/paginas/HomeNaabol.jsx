@@ -1,75 +1,203 @@
-import React from 'react'
-import { Header } from '../components/Header'
-import { TabVar } from '../components/TabVar'
-import { CardGerencia } from '../components/CardGerencia'
-import { CardNoticias } from '../components/CardNoticias'
+import React from "react";
+import { Header } from "../components/Header";
+import { TabVar } from "../components/TabVar";
+import { CardGerencia } from "../components/CardGerencia";
+import { CardNoticias } from "../components/CardNoticias";
+import { Footer } from "../components/footer";
 
 export const HomeNaabol = () => {
   return (
     <>
-        <section className='w-full h-screen'>
-            <div className='w-full h-4/6 lg:h-screen'>
-                <div className="w-full flex flex-col justify-center h-full bg-HomeImg bg-cover bg-center lg:bg-HomeImg lg:bg-cover lg:bg-center lg:bg-no-repet">
-                    <div className="mx-52">
-                        <p className='text-sm lg:text-xl text-white'>Bien venidos a</p>
-                        <h1 className="text-base text-white" >Naavegacion Aerea de Aeropuertos Bolivianos</h1>
-                    </div>
-
-                    <div className="w-3/5 h-20
-                     items-center mx-auto overflow-x-auto overscroll-x-contain flex space-x-6 overflow-hidden">
-                        <div className="Card_Areas flex flex-row  justify-center items-center">
-                            <a className="flex flex-col items-center" href="">
-                                <img className="w-15 text-center rounded-full border-2  bg-gris-800 " src='../src/img/icon5.png' alt="" />
-                                <p className="p-1 text-xs bg-secondary rounded-lg text-white">
-                                    Aeronaurica
-                                </p>
-                            </a>
-                        </div>
-                        <div className="flex flex-row  justify-center items-center">
-                            <a className="flex flex-col items-center" href="">
-                                <img className="w-8 text-center rounded-full border-2 bg-secondary " src='../src/img/icon5.png' alt="" />
-                                <p className="p-1 text-xs bg-secondary rounded-lg text-white">
-                                    Aeronaurica
-                                </p>
-                            </a>
-                        </div>
-                        <div className="flex flex-row  justify-center items-center">
-                            <a className="flex flex-col items-center" href="">
-                                <img className="w-8 text-center rounded-full border-2 bg-secondary " src='../src/img/icon5.png' alt="" />
-                                <p className="p-1 text-xs bg-secondary rounded-lg text-white">
-                                    Aeronaurica
-                                </p>
-                            </a>
-                        </div>
-                        <div className="flex flex-row  justify-center items-center">
-                            <a className="flex flex-col items-center" href="">
-                                <img className="w-8 text-center rounded-full border-2 bg-secondary " src='../src/img/icon5.png' alt="" />
-                                <p className="p-1 text-xs bg-secondary rounded-lg text-white">
-                                    Aeronaurica
-                                </p>
-                            </a>
-                        </div>
-                        <div className="flex flex-row  justify-center items-center">
-                            <a className="flex flex-col items-center" href="">
-                                <img className="w-8 text-center rounded-full border-2 bg-secondary " src='../src/img/icon5.png' alt="" />
-                                <p className="p-1 text-xs bg-secondary rounded-lg text-white">
-                                    Aeronaurica
-                                </p>
-                            </a>
-                        </div>
-                        
-                    </div>
-
-                </div>
+      <section className="w-full h-screen">
+        <div className="w-full flex flex-col- justify-evenly h-full bg-HomeImg bg-cover bg-center lg:bg-HomeImg lg:bg-cover lg:bg-center lg:bg-no-repet ">
+          <div className=" w-11/12 h-full  mx-auto flex flex-col justify-evenly">
+            <div className=" flex justify-between  text-white   items-center">
+              <div className=" text-3xl">
+                <p className="">Bien venidos a</p>
+                <h1 className=" font-bold text-4xl">
+                  Naavegacion Aerea de Aeropuertos Bolivianos
+                </h1>
+              </div>
+              <div className="w-30">
+                <img src="../src/img/logoA.png" alt="" className="w-full " />
+              </div>
             </div>
-            <section className="lg:w-4/5 lg:mx-auto">
-                <CardGerencia/>
-                <CardNoticias/>
-                
-            </section>
 
+            <div className="flex justify-center flex-wrap  text-white  items-center flex-col lg">
+              <div className="flex justify-center flex-wrap  text-white  items-center fle">
+                <a
+                  href=""
+                  className=" w-36 h-32 flex flex-col items-center justify-around  mx-4  my-5  "
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon1.png"
+                      alt=""
+                      className="w-20 rounded-full p-2 border-4  border-blue-900 bg-black"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-32 text-center rounded-xl p-2 font-bold">
+                    <p>AERONÁUTICA</p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className=" w-36 h-32 flex flex-col items-center justify-around  mx-4  my-5  "
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon2.png"
+                      alt=""
+                      className="w-10 lg:w-20 rounded-full p-2 border-4  border-blue-900 bg-black"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-32 text-center rounded-xl p-2 font-bold">
+                    <p>AERONÁUTICA</p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className=" w-36 h-32 flex flex-col items-center justify-around  mx-4  my-5  "
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon1.png"
+                      alt=""
+                      className="w-20 rounded-full p-2 border-4  border-blue-900 bg-black"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-32 text-center rounded-xl p-2 font-bold">
+                    <p>AERONÁUTICA</p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className=" w-36 h-32 flex flex-col items-center justify-around  mx-4  my-5  "
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon1.png"
+                      alt=""
+                      className="w-20 rounded-full p-2 border-4  border-blue-900 bg-black"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-32 text-center rounded-xl p-2 font-bold">
+                    <p>AERONÁUTICA</p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className=" w-36 h-32 flex flex-col items-center justify-around  mx-4  my-5  "
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon1.png"
+                      alt=""
+                      className="w-20 rounded-full p-2 border-4  border-blue-900 bg-black"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-32 text-center rounded-xl p-2 font-bold">
+                    <p>AERONÁUTICA</p>
+                  </div>
+                </a>
+
+                <a
+                  href=""
+                  className=" w-36 h-32 flex flex-col items-center justify-around  mx-4  my-5  "
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon1.png"
+                      alt=""
+                      className="w-20 rounded-full p-2 border-4  border-blue-900 bg-black"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-32 text-center rounded-xl p-2 font-bold">
+                    <p>AERONÁUTICA</p>
+                  </div>
+                </a>
+
+                <a
+                  href=""
+                  className=" w-36 h-32 flex flex-col items-center justify-around  mx-4  my-5  "
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon1.png"
+                      alt=""
+                      className="w-20 rounded-full p-2 border-4  border-blue-900 bg-black"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-32 text-center rounded-xl p-2 font-bold">
+                    <p>AERONÁUTICA</p>
+                  </div>
+                </a>
+
+                <a
+                  href=""
+                  className=" w-36 h-32 flex flex-col items-center justify-around  mx-4  my-5  "
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon1.png"
+                      alt=""
+                      className="w-20 rounded-full p-2 border-4  border-blue-900 bg-black"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-32 text-center rounded-xl p-2 font-bold">
+                    <p>AERONÁUTICA</p>
+                  </div>
+                </a>
+              </div>
+
+              <div className="flex justify-center flex-wrap  text-white  items-center fle my-10">
+                <div className="w-80  h-24 bg-neutral-800  rounded-3xl flex justify-around items-center text-2xl  shadow-inner m-5">
+                  <div className="">
+                    <p>La paz</p>
+                  </div>
+                  <div className="flex justify-between">
+                    <p className="mx-3">13 c</p>
+                    <img className="mx-4" src="../src/img/icon8.png" alt="" />
+                  </div>
+                </div>
+                <div className="w-80  h-24 bg-neutral-800 text-cyan-500 rounded-3xl flex justify-around items-center text-2xl  shadow-inner m-5">
+                  <div className="">
+                    <p>La paz</p>
+                  </div>
+                  <div className="flex justify-between">
+                    <p className="mx-3">13 c</p>
+                    <img className="mx-4" src="../src/img/icon8.png" alt="" />
+                  </div>
+                </div>
+                <div className="w-80  h-24 bg-neutral-800 text-cyan-500 rounded-3xl flex justify-around items-center text-2xl  shadow-inner m-5">
+                  <div className="">
+                    <p>La paz</p>
+                  </div>
+                  <div className="flex justify-between">
+                    <p className="mx-3">13 c</p>
+                    <img className="mx-4" src="../src/img/icon8.png" alt="" />
+                  </div>
+                </div>
+                <div className="w-80  h-24 bg-neutral-800 text-cyan-500 rounded-3xl flex justify-around items-center text-2xl  shadow-inner m-5">
+                  <div className="">
+                    <p>La paz</p>
+                  </div>
+                  <div className="flex justify-between">
+                    <p className="mx-3">13 c</p>
+                    <img className="mx-4" src="../src/img/icon8.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section className="lg:w-4/5 lg:mx-auto">
+          <CardGerencia />
+          <CardNoticias />
         </section>
-        <TabVar/>
+        <Footer />
+      </section>
     </>
-    )
-}
+  );
+};
