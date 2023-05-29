@@ -1,8 +1,9 @@
 import React from 'react'
-import { Header } from '../components/Header'
+
 import { TabVar } from '../components/TabVar'
 import { CardGerencia } from '../components/CardGerencia'
 import { CardNoticias } from '../components/CardNoticias'
+import { Footer } from '../components/Footer'
 
 export const HomeNaabol = () => {
   return (
@@ -68,8 +69,10 @@ export const HomeNaabol = () => {
                 
             </section>
 
+        <Footer/>
         </section>
-        <TabVar/>
+        
+        
     </>
     )
 }

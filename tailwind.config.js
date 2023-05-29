@@ -10,6 +10,7 @@ module.exports = {
         'HomeImg': "url('./src/img/ImagenHome.jpg')",
         'Noticia': "url('./src/img/Noticia1.png')",
         'Director': "url('./src/img/Director.png')",
+        'Login': "url('./src/img/LoginImg.jpg')",
 			  
       },
       backgroundColor: theme =>({
