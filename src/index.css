@@ -11,3 +11,6 @@
 .Card_Areas{
   @apply w-20 h-1 shadow-2xl rounded-lg flex-none transform transition-all hover:translate-y-4 hover:shadow-xl
 }
+.Link{
+  @apply text-white 
+}
