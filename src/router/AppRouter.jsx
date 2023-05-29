@@ -7,7 +7,6 @@ import { LoginPage } from '../auth/paginas/LoginPage'
 import { SobreNosotros } from '../paginas/SobreNosotros'
 import { Administrador } from '../administrador/Administrador'
 
-
 export const AppRouter = () => {
   return (
     <>
@@ -21,7 +20,7 @@ export const AppRouter = () => {
             <Route path='/' element={<Navigate to="/HomeNaabol"/>} />
 
         </Routes>
-        
+    
     </>
   )
 }
