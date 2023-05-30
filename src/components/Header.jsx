@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <>
-      <header className="bg-blue-950 w-full h-12 ">
+      <header className="bg-blue-950 w-full h-16 ">
         <nav className=" flex justify-between items-center  w-10/12 h-full  mx-auto">
-          <div>
+          <div className=" object-none ">
             <Link to="/HomeNaabol">
               <img className="w-12" src="../src/img/logoA.png" alt="" />
             </Link>
@@ -24,7 +24,7 @@ export const Header = () => {
               Iniciar Secion
             </Link>
 
-            <Link className="link text-white" to="https://www.facebook.com/">
+            <Link className=" link text-white" to="https://www.facebook.com/">
               <i class="bx bxl-instagram"></i>
             </Link>
             <Link className="link text-white">
