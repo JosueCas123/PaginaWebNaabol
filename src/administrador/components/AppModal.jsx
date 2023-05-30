@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal'
+import '../components/style.css'
 
 
 
@@ -18,8 +19,14 @@ const customStyles = {
   Modal.setAppElement('#root');
 export const AppModal = ()  => {
 
+  const [isOpen, setIsOpen] = useState(true)
+  
+ 
+
+
     const onCloseModal = () => {
         console.log('adsd')
+        setIsOpen(false)
     }
    
 
@@ -27,9 +34,12 @@ export const AppModal = ()  => {
   return (
    
       <Modal
-            isOpen={true}
+            isOpen={isOpen}
             onRequestClose={onCloseModal}
             style={customStyles}
+            className='modal'
+            overlayClassName='modal-fondo'
+            closeTimeoutMS={200}
       >
 
         <h1>Hla Mundo</h1>

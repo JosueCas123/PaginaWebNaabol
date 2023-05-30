@@ -10,7 +10,7 @@ import { Administrador } from '../administrador/Administrador'
 export const AppRouter = () => {
   return (
     <>
-    <Header/>
+   
         <Routes>
             <Route path='HomeNaabol' element={<HomeNaabol/>} />
             <Route path='/Noticias' element={<Noticias/>} />

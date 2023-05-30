@@ -2,18 +2,20 @@ import React from "react";
 
 import { CardGerencia } from "../components/CardGerencia";
 import { CardNoticias } from "../components/CardNoticias";
+import { Header } from "../components/Header";
 
 
 export const HomeNaabol = () => {
   return (
     <>
-      <section className="w-full h-screen">
+    <Header/>
+      <section className="w-full">
         <div className="w-full flex flex-col- justify-evenly h-full bg-HomeImg bg-cover bg-center lg:bg-HomeImg lg:bg-cover lg:bg-center lg:bg-no-repet ">
-          <div className=" w-11/12 h-full  mx-auto flex flex-col justify-evenly">
+          <div className=" w-10/12 h-full  mx-auto flex flex-col justify-evenly">
             <div className=" flex justify-between  text-white   items-center">
               <div className=" text-3xl">
                 <p className="">Bien venidos a</p>
-                <h1 className=" font-bold text-4xl">
+                <h1 className=" font-bold text-xl">
                   Naavegacion Aerea de Aeropuertos Bolivianos
                 </h1>
               </div>

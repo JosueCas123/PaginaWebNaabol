@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <>
-      <header className="bg-blue-950 w-full h-20 ">
-        <nav className="flex justify-between items-center  w-11/12 h-full  mx-auto">
+      <header className="bg-blue-950 w-full h-12 ">
+        <nav className=" flex justify-between items-center  w-10/12 h-full  mx-auto">
           <div>
             <Link to="/HomeNaabol">
-              <img className="w-20" src="../src/img/logoA.png" alt="" />
+              <img className="w-12" src="../src/img/logoA.png" alt="" />
             </Link>
           </div>
 
-          <div className="space-x-4  text-xl">
+          <div className="space-x-4  text-sm">
             <Link className="Link " to="/SobreNosotros">
               Sobre nosotros
             </Link>

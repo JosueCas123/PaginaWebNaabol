@@ -1,8 +1,10 @@
 import React from 'react'
+import { Header } from '../components/Header'
 
 export const Noticias = () => {
   return (
     <>
+        <Header/>
         <div className=' w-9/12 md:w-10/12 mt-5 mx-auto'>
                 <h2>Noticias destacadas</h2>
             <div className=" md:flex md:space-x-5 box-border w-full mx-auto h-1/2 hidden:space-y-5" id='Noticias_descatadas'>
