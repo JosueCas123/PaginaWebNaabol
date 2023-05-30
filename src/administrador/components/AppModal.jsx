@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'react-modal'
 import '../components/style.css'
 import { Alerta } from '../../components/Alerta';
+import useUser from '../../hooks/useUser';
 
 
 
@@ -21,20 +22,24 @@ const customStyles = {
 export const AppModal = ()  => {
 
   const [isOpen, setIsOpen] = useState(true)
-  
+  const {guardarNoticia} = useUser()
   const [titulo, setTitulo] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [selectValue, setSelectValue] = useState('');
   const [alerta, setAlerta] = useState({})
 
     const handleSubmit = (e) =>{
+
       e.preventDefault()
-      console.log('saddasd')
+
+
+      
       if (titulo === '' || descripcion === '' || selectValue === '') {
         setAlerta({
           msg: 'todos los campos son obligatorios',
           error: true
         })
+        console.log('saddasd')
     
         setTimeout(() => {
             setAlerta({
@@ -62,35 +67,19 @@ export const AppModal = ()  => {
           prioridad: selectValue
         };
         console.log(info)
-        console.log(base64)
+       // console.log(base64)
 
-
-        const url = 'http://10.12.100.220:8000/api/noticia';
-        const token = localStorage.getItem('token');
+        setAlerta({})
+        guardarNoticia(info)
+        
   
-        fetch(url, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        })
-          .then(response => response.json())
-          .then((data) => {
-            if (data.status === 'OK') {
-              console.log('datos registrados', data);
-              // Realiza acciones adicionales si es necesario
-            } else {
-              console.log('error!!');
-            }
-          })
-          .catch(error => console.log(error));
-    
-    }
+      }
       reader.readAsDataURL(imagen);
         
-    
+      setTitulo('')
+      setDescripcion('')
+      setSelectValue('')
+      imagenInput.value = ''
     }
 
   const {msg} = alerta

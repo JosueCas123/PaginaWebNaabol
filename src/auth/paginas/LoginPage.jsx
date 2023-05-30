@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useForm } from '../../hooks/useFom'
 import { Alerta } from '../../components/Alerta'
 import { Link, useNavigate } from 'react-router-dom'
+import useAuth from '../../hooks/useAuth'
 
 export const LoginPage = () => {
 
@@ -9,6 +10,7 @@ export const LoginPage = () => {
     const [usuario, setUsuario] = useState('')
     const [contraseña, setContraseña] = useState('')
     const [alerta, setAlerta] = useState({})
+    const {setAuth} =  useAuth()
     
     const handleSubmit = async(e) => {
         console.log('enviado')
@@ -31,20 +33,37 @@ export const LoginPage = () => {
             
         }
         try {
-            const url = 'http://10.12.100.252:8000/api/login'
+            const url = 'http://10.12.100.248:8000/api/login'
             
-            const data = await fetch(url,{
-
-                method: 'POST',
-                body: JSON.stringify({ usuario, contraseña }),
-                headers: {
-                    'Content-Type': 'application/json'
+            try {
+                console.log(JSON.stringify(usuario, contraseña))
+                const response = await fetch(url, {
+                    method: 'POST',
+                    body: JSON.stringify({usuario, contraseña}),
+                    // data puede ser string o un objeto
+        
+                    headers: {
+                        'Content-Type': 'application/json'
+                        // Y le decimos que los datos se enviaran como JSON
+                    }
+                });
+                // Verificar el estado de la respuesta
+                if (response.ok) {
+                    // La solicitud fue exitosa (código de estado 200-299)
+                    const data = await response.json();
+                    // Realizar alguna acción con los datos de respuesta
+                     console.log(data);
+                    
+                    localStorage.setItem('token', data.token)
+                    navigate('/Administrador');
+                } else {
+                    // La solicitud no fue exitosa
+                    console.log('Error en la solicitud:', response.status);
                 }
+            } catch (error) {
+                console.log(error);
             }
-            )
-            console.log(data)
-            localStorage.setItem('token', data.token)
-            navigate('/Administrador')
+            
         } catch (error) {
             console.log(error)
         }
