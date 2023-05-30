@@ -52,7 +52,7 @@ export const HomeNaabol = () => {
                 >
                   <div className="">
                     <img
-                      src="../src/img/icon1.png"
+                      src="../src/img/icon2.png"
                       alt=""
                       className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
                     />
@@ -67,7 +67,7 @@ export const HomeNaabol = () => {
                 >
                   <div className="">
                     <img
-                      src="../src/img/icon1.png"
+                      src="../src/img/icon3.png"
                       alt=""
                       className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
                     />
@@ -82,7 +82,7 @@ export const HomeNaabol = () => {
                 >
                   <div className="">
                     <img
-                      src="../src/img/icon1.png"
+                      src="../src/img/icon4.png"
                       alt=""
                       className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
                     />
@@ -97,7 +97,7 @@ export const HomeNaabol = () => {
                 >
                   <div className="">
                     <img
-                      src="../src/img/icon1.png"
+                      src="../src/img/icon5.png"
                       alt=""
                       className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
                     />
@@ -112,7 +112,7 @@ export const HomeNaabol = () => {
                 >
                   <div className="">
                     <img
-                      src="../src/img/icon1.png"
+                      src="../src/img/icon6.png"
                       alt=""
                       className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
                     />
@@ -127,7 +127,7 @@ export const HomeNaabol = () => {
                 >
                   <div className="">
                     <img
-                      src="../src/img/icon1.png"
+                      src="../src/img/icon7.png"
                       alt=""
                       className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
                     />
@@ -142,7 +142,7 @@ export const HomeNaabol = () => {
                 >
                   <div className="">
                     <img
-                      src="../src/img/icon1.png"
+                      src="../src/img/icon8.png"
                       alt=""
                       className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
                     />
