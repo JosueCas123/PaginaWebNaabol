@@ -5,8 +5,9 @@ export const SobreNosotros = () => {
   return (
     <>
       <Header />
-      <section className="w-full h-64 bg-HomeNosotros bg-cover bg-center sm:h-56 ">
-        <div className="max-w-7xl w-11/12 mx-auto h-full py-6 flex flex-col justify-center text-white sm:items-start ">
+      <section className="w-full">
+      <img className=" h-96 w-full object-cover justify-center items-center relative" src="../src/img/nosotros2.jpg" alt="" />
+        <div className="max-w-7xl w-11/12 mx-auto h-full py-6 flex flex-col justify-center text-white sm:items-start absolute top-0 xl:top--8 left-7">
           <h2 className=" text-2xl font-bold text-center sm:text-3xl">
             NUESTRA INSTITUCIÓN
           </h2>

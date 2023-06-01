@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const NoticiaVer = () => {
   return (
@@ -52,9 +53,13 @@ export const NoticiaVer = () => {
                 </p>
                 <div className="flex justify-between items-center  sm:flex sm:justify-between my-2 md:items-center lg:flex-col">
                   <p className=" sm: text-slate-400">12 de abril, 2023</p>
-                  <button className="  bg-blue-900 p-2 text-white text-center rounded-xl">
-                    Leer noticia completa
+                 <Link 
+                to={`/PageNoticia/${5}`}
+              >
+                  <button className="text-white bg-blue-900 p-2 rounded-2xl">
+                    Ver todas las noticias
                   </button>
+              </Link>
                 </div>
               </di>
             </div>
@@ -129,9 +134,13 @@ export const NoticiaVer = () => {
             </div>
 
             <div className="flex items-center justify-center my-6">
-              <button className="text-white bg-blue-900 p-2 rounded-2xl">
-                Ver todas las noticias
-              </button>
+              <Link 
+                to='/PageNoticia'
+              >
+                  <button className="text-white bg-blue-900 p-2 rounded-2xl">
+                    Ver todas las noticias
+                  </button>
+              </Link>
             </div>
           </div>
         </div>

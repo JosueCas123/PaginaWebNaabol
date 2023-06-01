@@ -7,6 +7,7 @@ import { Contenido } from './components/Contenido';
 
 
 
+
 export const Administrador = () => {
  
 

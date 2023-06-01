@@ -6,6 +6,7 @@ import { Noticias } from '../paginas/Noticias'
 import { LoginPage } from '../auth/paginas/LoginPage'
 import { SobreNosotros } from '../paginas/SobreNosotros'
 import { Administrador } from '../administrador/Administrador'
+import { NotiaPage } from '../paginas/NotiaPage'
 
 export const AppRouter = () => {
   return (
@@ -14,6 +15,7 @@ export const AppRouter = () => {
         <Routes>
             <Route path='HomeNaabol' element={<HomeNaabol/>} />
             <Route path='/Noticias' element={<Noticias/>} />
+            <Route path="PageNoticia/:id" element={<NotiaPage/>} />
             <Route path='/SobreNosotros' element={<SobreNosotros/>} />
             <Route path='/Login' element={<LoginPage/>} />
             <Route path='/Administrador' element={<Administrador/>} />

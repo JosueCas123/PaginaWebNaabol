@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         HomeImg: "url('./src/img/ImagenHome.jpg')",
-        HomeNosotros: "url('./src/img/fondo2.png')",
+        HomeNaabol: "url('./src/img/Naabol1.jpg')",
+        HomeNosotros: "url('./src/img/nosotros.jpg')",
         Noticia: "url('./src/img/Noticia1.png')",
         Director: "url('./src/img/Director.png')",
         Login: "url('./src/img/LoginImg.jpg')",

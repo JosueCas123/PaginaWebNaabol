@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header } from '../components/Header'
 import useUser from '../hooks/useUser'
+import { NoticiaVer } from '../components/NoticiaVer';
 
 export const Noticias = () => {
     const {noticias} = useUser()
@@ -22,8 +23,10 @@ export const Noticias = () => {
                                         {noticia.titulo}
                                   </h2>
                                   <p>{noticia.fecha }</p>
-                                  <p className="text-white text-md px-4">{noticia.descripcion}</p>
-                               
+                                  
+                                </div>
+                                <div>
+
                                 </div>
                              </div>
                         ))
@@ -35,6 +38,7 @@ export const Noticias = () => {
                   
             </div>
         </div>
+        <NoticiaVer/>
     </>
   );
 };
