@@ -12,9 +12,9 @@ export const Table = () => {
   return (
 
     <>
-    <div className='w-full'>
+    <div style={{ overflowX: 'auto' }}>
 
-        <table class="min-w-max w-full table-auto  overflow-x-auto overscroll-x-contain">
+        <table  className="w-full scroll-x-1">
                 <thead>
                     <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                          <th class="py-3 px-6 text-left">FECHA</th>
