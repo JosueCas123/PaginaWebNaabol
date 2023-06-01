@@ -2,18 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-.Card{
-  @apply w-48 h-64 shadow-md rounded-lg flex-none transform transition-all hover:translate-y-4 hover:shadow-xl
+.Card {
+  @apply w-48 h-64 shadow-md rounded-lg flex-none transform transition-all hover:translate-y-4 hover:shadow-xl;
 }
-.Card_Naabol{
-  @apply w-72 h-36 shadow-2xl rounded-lg flex-none transform transition-all hover:translate-y-4 hover:shadow-xl
+.Card_Naabol {
+  @apply w-72 h-36 shadow-2xl rounded-lg flex-none transform transition-all hover:translate-y-4 hover:shadow-xl;
 }
-.Card_Areas{
-  @apply w-20 h-1 shadow-2xl rounded-lg flex-none transform transition-all hover:translate-y-4 hover:shadow-xl
+.Card_Areas {
+  @apply w-20 h-1 shadow-2xl rounded-lg flex-none transform transition-all hover:translate-y-4 hover:shadow-xl;
 }
-.Link{
-  @apply text-white 
+.Link {
+  @apply text-white;
 }
-.CardNoticias{
-  @apply w-64 h-96 shadow-md rounded-lg flex-none transform transition-all hover:translate-y-4 hover:shadow-xl
+.CardNoticias {
+  @apply w-64 h-96 shadow-md rounded-lg flex-none transform transition-all hover:translate-y-4 hover:shadow-xl;
+}
+.flex1 {
+  @apply flex items-center justify-center;
 }
