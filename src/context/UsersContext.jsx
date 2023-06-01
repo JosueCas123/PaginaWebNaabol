@@ -7,16 +7,18 @@ export const UsersProvider = ({children}) => {
 
     const {auth} = useAuth()
     const [noticias, setNoticias] = useState([])
+    
+    console.log(noticias)
 
     useEffect(() => {
         const obtenerNoticias = async() => {
   
           try {
             
-            const url = 'http://10.12.100.248:8000/api/noticias/area';
+            const url = 'http://10.12.100.67:8000/api/noticias/area';
             const token = localStorage.getItem('token');
       
-            fetch(url, {
+             const response = await fetch(url, {
               method: 'GET',
               headers: {
                 'Authorization': `Bearer ${token}`,
@@ -24,17 +26,11 @@ export const UsersProvider = ({children}) => {
               },
               
             })
-              .then(response => response.json())
-              .then((data) => {
-                if (data.status === 'OK') {
-                  console.log('datos registrados', data);
-                  setNoticias(data.data)
-                  // Realiza acciones adicionales si es necesario
-                } else {
-                  console.log('error!!');
-                }
-              })
-              .catch(error => console.log(error));
+            const {data} = await response.json()
+
+           console.log(data)
+              
+             setNoticias(data)
   
           } catch (error) {
               console.log(error)
@@ -50,10 +46,10 @@ export const UsersProvider = ({children}) => {
       const guardarNoticia = async(noticia) => {
       
         try {
-            const url = 'http://10.12.100.248:8000/api/noticia';
+            const url = 'http://10.12.100.67:8000/api/noticia';
         const token = localStorage.getItem('token');
   
-            fetch(url, {
+           const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -61,17 +57,12 @@ export const UsersProvider = ({children}) => {
             },
             body: JSON.stringify(noticia)
             })
-            .then(response => response.json())
-            .then((data) => {
-                if (data.status === 'OK') {
-                console.log('datos registrados', data);
-                // Realiza acciones adicionales si es necesario
-                } else {
-                console.log('error!!');
-                }
-            })
-            .catch(error => console.log(error));
-        
+            
+            const data = await response.json()
+            const {multimedia_id, ...NoticiasAlmacenadas} = data
+            console.log(NoticiasAlmacenadas)
+            setNoticias([ ...noticias, NoticiasAlmacenadas,])
+
         } catch (error) {
             console.log(error)
         }
@@ -88,16 +79,22 @@ export const UsersProvider = ({children}) => {
         console.log(id)
         const confirmar = confirm('Confimar que deseas eliminar?')
         if(confirmar){
-            const urlNoticia = `http://10.12.100.248:8000/api/eliminar/noticia/${id}`
+            const urlNoticia = `http://10.12.100.67:8000/api/eliminar/noticia/${id}`
             const token = localStorage.getItem('token');
             try {
-                await fetch(urlNoticia, {
+               const response = await fetch(urlNoticia, {
                     method: 'PUT',
                     headers: {
                       'Authorization': `Bearer ${token}`,
                       'Content-Type': 'application/json'
                 },
                 });
+                const data = await response.json()
+
+                const noticiasAtualizados = noticias.filter(noticia => noticia.id !== id)
+                setNoticias(noticiasAtualizados)
+                console.log(data)
+              
             } catch (error) {
                 console.log(error);
             }
@@ -110,8 +107,9 @@ export const UsersProvider = ({children}) => {
 
     return(
         <UserContext.Provider value={{
-            guardarNoticia,
             noticias,
+            setNoticias,
+            guardarNoticia,
             eliminarNoticia
         }}>
 

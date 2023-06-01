@@ -10,7 +10,7 @@ export const HomeNaabol = () => {
     <>
       <Header />
       <section className="w-full  md:h-screen">
-        <div className="w-full flex flex-col- justify-evenly h-full bg-HomeNaabol bg-cover object-cover xl:bg-center lg:bg-HomeNaabol lg:bg-cover lg:bg-center lg:bg-no-repet ">
+        <div className="w-full flex flex-col- justify-evenly h-full bg-HomeImg bg-cover object-cover bg-center  lg:bg-cover lg:bg-center lg:bg-no-repet ">
           <div className=" w-10/12 h-full  mx-auto flex flex-col justify-evenly py-10">
             <div className=" flex  text-white  flex-col sm:flex-row sm:justify-between  sm:items-center  ">
               <div className=" ">

@@ -16,7 +16,7 @@ export const AuthProvider = ({children}) => {
               return
           }
           try {
-              const {data} = await fetch(url,{
+              const response = await fetch(url,{
                     
                 body: JSON.stringify({ usuario, contraseña }),
                 headers: {
@@ -24,6 +24,7 @@ export const AuthProvider = ({children}) => {
                     'Content-Type': 'application/json'
                 }
               })
+              const data = await response.json()
               setAuth(data)
           } catch (error) {
               console.log(error.response.data.msg)
@@ -40,7 +41,8 @@ export const AuthProvider = ({children}) => {
     return(
         <AuthContext.Provider value={{
             auth,
-            setAuth
+            setAuth,
+            
         }}>
             {children}
         </AuthContext.Provider>

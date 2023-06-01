@@ -5,9 +5,7 @@ import { ContendoTable } from './ContendoTable'
 export const Table = () => {
 
     const {noticias} = useUser()
-    
-    // const data = noticias.map(noticia => noticia)
-    // console.log(data)
+ 
 
   return (
 
@@ -27,15 +25,12 @@ export const Table = () => {
 
             <tbody class="text-gray-600 text-sm font-light border-spacing-1" >
                 {
-                    noticias.map(noticia => {
-                        return(
-                            
-                            <ContendoTable
-                                key={noticia.id}
-                                noticia={noticia}
-                            />
-                        )
-                    })
+                   noticias.map(noticia => (
+                    <ContendoTable
+                        key={noticia.id}
+                        noticia={noticia}
+                    />
+                   ))
                 }
             </tbody>
         </table>

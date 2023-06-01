@@ -9,21 +9,22 @@ export const Noticias = () => {
   return (
     <>
         <Header/>
+        {/* */}
         <div className='w-11/12 md:w-11/12 mt-5 mx-auto'>
                 <h2>Noticias destacadas</h2>
             <div className="w-auto h-96 items-center my-10 overflow-x-auto overscroll-x-contain  space-x-6  flex justify-center md:flex md:space-x-5 box-border mx-auto hidden:space-y-5 overflow-hidden" id='Noticias_descatadas'>
             {
                         noticias.map(noticia  => (
                             <div className="CardNoticias">
-                                <div className="w-full h-3/5 bg-Noticia bg-cover bg-center rounded-t-xl">
-                                    <img src={noticia.imagen} alt="" />
+                                <div className="w-full h-3/5 bg-Noticia bg-cover bg-center ">
+                                    <img className="rounded-lg" src={noticia.imagen} alt="" />
                                 </div>
-                                <div className="w-full h-2/5  rounded-b-lg bg-sky-950 flex flex-col justify-evenly p-2">
+                                <div className="w-full h-2/5   flex flex-col justify-evenly p-2">
                                   <h2 className="text-white text-bold text-xl px-4 text-center">
                                         {noticia.titulo}
                                   </h2>
                                   <p>{noticia.fecha }</p>
-                                  
+
                                 </div>
                                 <div>
 
@@ -35,7 +36,7 @@ export const Noticias = () => {
 
 
             <div className="bg-gray-700 w" >
-                  
+
             </div>
         </div>
         <NoticiaVer/>

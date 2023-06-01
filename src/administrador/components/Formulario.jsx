@@ -79,14 +79,15 @@ export const Formulario = () => {
 
          <CardInfo/>
         <div style={{ overflowX: 'auto' }} className='w-3/5 shadow-lgflex flex-col justify-center items-center content  transform ease-in-out duration-500 ml-20 p-5 xl:ml-72 xl:mt-20  shadow-xl  lx:p-16'>
-        <h2>Nueva Noticia</h2>
+        <h2 className=" font-extrabold xl:text-xl  ">Nueva Noticia</h2>
 
         <form onSubmit={handleSubmit}>
                 <div class="mb-4">
-                    <label class="text-xl text-gray-600">Title <span class="text-red-500">*</span></label>
+                    <label class="text-xl  font-medium mt-10">Titulo<span class="text-red-500">*</span></label>
                     <input 
                         type="text" 
-                        class="border-2 border-gray-300 p-2 w-full" 
+                        class="border-2 border-gray-300 p-2 w-full " 
+                        placeholder='Ingrese un titulo'
                         name="titulo" 
                         value={titulo}
                         onChange={e => setTitulo( e.target.value)}
@@ -95,18 +96,18 @@ export const Formulario = () => {
                     />
                 </div>
 
-                <div class=" md:flex  p-1">
+                <div class=" md:flex md:justify-between p-1 space-x-9">
                     <div>
-                            <label for=""> Imegen</label>
+                            <label className='md:text-lg mr-3 font-medium' for=""> Imegen</label>
                             <input 
                             id="imagen" 
                             type="file" 
-                            class="input"
+                            class="input "
                             required
                             />
                     </div>
                         <div>
-                            <label  htmlFor="">Priorida</label>
+                            <label className='text-lg font-medium mr-3' htmlFor="">Priorida</label>
                             <select 
                             class="border-2 border-gray-300 border-r p-2" 
                             value={selectValue}
@@ -120,10 +121,11 @@ export const Formulario = () => {
                         </div>
                 </div>
                 <div class="mb-4 flex flex-col">
-                    <label class="text-xl text-gray-600">Description</label>
+                    <label class="text-lg font-medium mr-3">Description</label>
                     <textarea 
                         name="content" 
                         class="border-2 border-gray-500"
+                        placeholder='Ingrese una descripcion'
                         value={descripcion}
                         onChange={e => setDescripcion( e.target.value)}
                     >

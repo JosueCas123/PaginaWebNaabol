@@ -33,7 +33,7 @@ export const LoginPage = () => {
             
         }
         try {
-            const url = 'http://10.12.100.248:8000/api/login'
+            const url = 'http://10.12.100.67:8000/api/login'
             
             try {
                 console.log(JSON.stringify(usuario, contraseña))
@@ -47,6 +47,8 @@ export const LoginPage = () => {
                         // Y le decimos que los datos se enviaran como JSON
                     }
                 });
+
+                
                 // Verificar el estado de la respuesta
                 if (response.ok) {
                     // La solicitud fue exitosa (código de estado 200-299)
