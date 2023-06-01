@@ -4,7 +4,7 @@ export const HeaderAdmin = () => {
   return (
     <div className = "fixed w-full z-30 flex bg-white dark:bg-[#0F172A] p-2 items-center justify-center h-16 px-10">
         <div className = "logo ml-12 dark:text-white  transform ease-in-out duration-500 flex-none h-full flex items-center justify-center">
-            NERVE
+            NAABOL
         </div>
     
         <div className = "grow h-full flex items-center justify-center"></div>

@@ -9,6 +9,7 @@ module.exports = {
         HomeNosotros: "url('./src/img/nosotros.jpg')",
         Noticia: "url('./src/img/Noticia1.png')",
         Director: "url('./src/img/Director.png')",
+        Aeropuerto: "url('./src/img/fondo1.jpg')",
         Login: "url('./src/img/LoginImg.jpg')",
       },
       backgroundColor: (theme) => ({

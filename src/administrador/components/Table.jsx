@@ -23,7 +23,7 @@ export const Table = () => {
                     </tr>
                 </thead>
 
-            <tbody class="text-gray-600 text-sm font-light border-spacing-1" >
+            <tbody class="text-gray-600 text-sm font-light border-spacing-1 " >
                 {
                    noticias.map(noticia => (
                     <ContendoTable

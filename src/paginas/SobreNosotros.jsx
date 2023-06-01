@@ -5,9 +5,9 @@ export const SobreNosotros = () => {
   return (
     <>
       <Header />
-      <section className="w-full">
-      <img className=" h-96 w-full object-cover justify-center items-center relative" src="../src/img/nosotros2.jpg" alt="" />
-        <div className="max-w-7xl w-11/12 mx-auto h-full py-6 flex flex-col justify-center text-white sm:items-start absolute top-0 xl:top--8 left-7">
+      <section className="w-full h-64 bg-HomeNosotros bg-cover bg-center sm:h-56 ">
+        <div className="max-w-screen-2xl w-11/12 mx-auto h-full py-6 flex flex-col justify-center text-white sm:items-start ">
+k
           <h2 className=" text-2xl font-bold text-center sm:text-3xl">
             NUESTRA INSTITUCIÓN
           </h2>
@@ -17,10 +17,10 @@ export const SobreNosotros = () => {
         </div>
       </section>
 
-      <section className="w-11/12 mx-auto">
+      <section className="w-11/12 mx-auto max-w-screen-2xl">
         <div className="my-6 ">
           <div className="my-3">
-            <ul className="font-bold w-full px-3 ">
+            <ul className="font-bold w-full  ">
               <a href="">
                 <li>Misión y Visión</li>
               </a>
@@ -38,6 +38,7 @@ export const SobreNosotros = () => {
               </a>
             </ul>
           </div>
+          <hr className="bg-black h-" />
           <div className="">
             <p>
               NAABOL Es una entidad pública descentralizada de derecho público
@@ -60,6 +61,32 @@ export const SobreNosotros = () => {
                 <li>Servicios de meteorología aeronáutica (MET)</li>
                 <li>Servicios de comunicaciones aeronáuticas (COM)</li>
                 <li>Servicio de salvamento y extinción de incendios (SSEI)</li>
+              </ul>
+              <h6>Servicios en tierra</h6>
+              <ul>
+                <li>Facilitación aeronáutica (FAL)</li>
+                <li>
+                  Seguridad aeroportuaria (AVSEC). Otros servicios auxiliares.
+                </li>
+                <li>Servicios de rampa y plataforma.</li>
+                <li>Servicio de telecomunicaciones y radio ayudas.</li>
+                <li>Servicio de ayudas visuales e iluminación.</li>
+              </ul>
+              <h6>
+                Asimismo, se cuenta con los SERVICIOS NACIONALES DE NAVEGACIÓN
+                AÉREA, estructurado de la siguiente manera:
+              </h6>
+              <ul>
+                <li>
+                  Centro de control aérea La Paz (ACC), se tiene 28
+                  controladores de área en ruta.
+                </li>
+                <li>
+                  Centro de control aeronáutico de mensajes (CCAM) contamos con
+                  15 operadores AMHS.
+                </li>
+                <li>Oficina nacional de información aeronáutica (AIM)</li>
+                <li>Especialistas (AIS)</li>
               </ul>
             </div>
           </div>

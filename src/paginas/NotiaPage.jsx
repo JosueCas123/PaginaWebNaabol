@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Header } from '../components/Header'
 import { RedesSociales } from '../components/RedesSociales'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useParams,Navigate } from 'react-router-dom'
+
 
 export const NotiaPage = () => {
+
+  const {id} = useParams()
+  const navigate = useNavigate()
+
+  const onNavigateRegresar = () => {
+    navigate(-1);
+  }
+
+  const noticia = useMemo(() => getIdNoticia(id), [id]) 
+
+  if(!noticia){
+    return <Navigate to="/marvel"/>
+  }
+
   return (
    <>
 
@@ -14,14 +29,14 @@ export const NotiaPage = () => {
         <div className="xl:w-2/4 shadow-md  my-5 p-2  ">
             <div>
               <img
-                src="../src/img/nn1.png"
+                src={noticia.imagen}
                 alt=""
                 className="w-full xl:h-96 rounded-lg object-cover object-center "
               />
             </div>
               <di className="p-2 pt-4">
                 <h5 className=" text-lg font-semibold md:text-xl">
-                  ¡Feliz día del Niño, la mejor tripulación del mundo!
+                  {noticia.titulo}
                 </h5>
                 <div className="mt-2">
                   <p className="text-sm font-normal">12 de abril, 2023</p>
@@ -33,7 +48,11 @@ export const NotiaPage = () => {
 
               </di>
             </div>
-
+      <div>
+        <button onClick={onNavigateRegresar}>
+          Volver atras
+        </button>
+      </div>
     </div>
    </>
   )

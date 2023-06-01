@@ -3,7 +3,6 @@ import useUser from '../../hooks/useUser'
 
 export const ContendoTable = ({noticia}) => {
 
-    console.log(noticia)
     const {eliminarNoticia} = useUser()
     const {titulo, fecha, descripcion, imagen, id} = noticia
   return (
@@ -41,7 +40,7 @@ export const ContendoTable = ({noticia}) => {
            <td class="sec2n__td">
                <div class="sec2n__delete">
                <button
-                onClick={() => eliminarNoticia(id)}
+                onClick={() => eliminarNoticia(noticia)}
                > 
                    <i class='bx bxs-coffee-togo eliminar'></i>
                </button>
