@@ -10,6 +10,8 @@ module.exports = {
         Director: "url('./src/img/Director.png')",
         Aeropuerto: "url('./src/img/fondo1.jpg')",
         Login: "url('./src/img/LoginImg.jpg')",
+        Admi: "url('./src/img/administratico.jpg')",
+        legal: "url('./src/img/legal.jpg')",
       },
       backgroundColor: (theme) => ({
         ...theme("colors"),

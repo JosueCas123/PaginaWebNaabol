@@ -11,7 +11,7 @@ export const CardNoticias = () => {
           <div className="w-full h-3/5 bg-Noticia bg-cover bg-center rounded-t-xl"></div>
           <div className="w-full h-2/5  rounded-b-lg  flex flex-col justify-evenly p-2">
             <p className="text-white text-bold text-xl px-4 text-center">
-              Norway asddddddddddddddddddddddddddddddddddddddddddddddddddddssssssssssdddddddddddddddddddddddddd
+              Norway
             </p>
             <p className="text-white text-md px-4">Paisajes incheibles</p>
             <a
@@ -28,7 +28,10 @@ export const CardNoticias = () => {
             <p className="text-white text-bold text-xl px-4 text-center">
               Norway
             </p>
-            <p className="text-white text-md px-4">Paisajes incheiblesssssssssssssssssssssssssssssssssssss ssssssssssssssssss</p>
+            <p className="text-white text-md px-4">
+              Paisajes incheiblesssssssssssssssssssssssssssssssssssss
+              ssssssssssssssssss
+            </p>
             <a
               href=""
               className="text-white  flex flex-row-reverse hover:text-blue-400"
