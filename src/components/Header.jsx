@@ -40,6 +40,9 @@ export const Header = () => {
             <Link className="link text-white">
               <i class="bx bxl-youtube"></i>
             </Link>
+            <Link className="link text-white">
+              <i class="bx bxl-tiktok"></i>
+            </Link>
           </div>
         </nav>
       </header>
