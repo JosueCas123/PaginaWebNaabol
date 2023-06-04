@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import useUser from '../../hooks/useUser';
 import { Alerta } from '../../components/Alerta';
 import { HeaderAdmin } from './HeaderAdmin';
@@ -7,11 +7,25 @@ import { CardInfo } from './CardInfo';
 
 export const Formulario = () => {
 
-    const {guardarNoticia} = useUser()
     const [titulo, setTitulo] = useState('');
     const [descripcion, setDescripcion] = useState('');
     const [selectValue, setSelectValue] = useState('');
     const [alerta, setAlerta] = useState({})
+    
+    const [id, setId] = useState(null)
+    const {guardarNoticia, noticia} = useUser()
+
+    useEffect(() => {
+
+        if (noticia?.titulo) {
+                setTitulo(noticia.titulo)
+                setDescripcion(noticia.descripcion)
+                setSelectValue(noticia.selectValue)
+                setId(noticia.id)
+        }
+      
+    }, [noticia])
+    
 
     const handleSubmit = (e) =>{
 
@@ -55,7 +69,7 @@ export const Formulario = () => {
          // console.log(base64)
   
           setAlerta({})
-          guardarNoticia(info)
+          guardarNoticia(info, id)
           
     
         }

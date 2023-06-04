@@ -7,9 +7,10 @@ export const UsersProvider = ({children}) => {
 
     const {auth} = useAuth()
     const [noticias, setNoticias] = useState([])
+    const [noticia, setNoticia] = useState({})
 
 
-    //console.log(noticias)
+    console.log(noticias)
 
 
     useEffect(() => {
@@ -17,7 +18,7 @@ export const UsersProvider = ({children}) => {
 
           try {
 
-            const url = 'http://10.12.100.67:8000/api/noticias/area';
+            const url = 'http://127.0.0.1:8000/api/noticias/area';
             const token = localStorage.getItem('token');
 
              const response = await fetch(url, {
@@ -76,43 +77,73 @@ export const UsersProvider = ({children}) => {
     //   }, [auth])
 
 
-      const guardarNoticia = async(noticia) => {
+      const guardarNoticia = async(noticia, id) => {
 
-        try {
-            const url = 'http://10.12.100.67:8000/api/noticia';
-        const token = localStorage.getItem('token');
+        if (id) {
+          const urlEdit = `http://127.0.0.1:8000/api/editar/${id}`
+            const token = localStorage.getItem('token');
+            try {
+              const response = await fetch(urlEdit, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(noticia)
+                })
+                const data = await response.json()
 
-           const response = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(noticia)
-            })
+                console.log(data)
 
-            const data = await response.json()
-            const {multimedia_id, ...NoticiasAlmacenadas} = data
-            console.log(NoticiasAlmacenadas)
-            setNoticias([noticias])
+                const noticiaActualizada = noticias.map(noticiaState => noticiaState.id === data.id ? data : noticiaState)
+                setNoticias(noticiaActualizada)
+                //console.log(data)
 
-        } catch (error) {
-            console.log(error)
+            } catch (error) {
+                console.log(error);
+            }
+
+        }else{
+          try {
+              const url = 'http://127.0.0.1:8000/api/noticia';
+          const token = localStorage.getItem('token');
+  
+             const response = await fetch(url, {
+              method: 'POST',
+              headers: {
+                  'Authorization': `Bearer ${token}`,
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(noticia)
+              })
+  
+              const data = await response.json()
+              console.log(data)
+              const {multimedia_id, ...NoticiasAlmacenadas} = data.noticia
+              console.log(NoticiasAlmacenadas)
+              setNoticias([...noticias, NoticiasAlmacenadas])
+  
+          } catch (error) {
+              console.log(error)
+          }
         }
+
+
 
 
     };
 
-    // const setEdicion = (noticia) => {
-    //     setpaciente(noticia)
-    //  }
+    const setEdicion = (noticia) => {
+      console.log(noticia)
+      setNoticia(noticia)
+     }
 
 
     const eliminarNoticia =async ({id})=> {
         console.log(id)
         const confirmar = confirm('Confimar que deseas eliminar?')
         if(confirmar){
-            const urlNoticia = `http://10.12.100.67:8000/api/eliminar/noticia/${id}`
+            const urlNoticia = `http://127.0.0.1:8000/api/eliminar/noticia/${id}`
             const token = localStorage.getItem('token');
             try {
                const response = await fetch(urlNoticia, {
@@ -143,7 +174,9 @@ export const UsersProvider = ({children}) => {
             noticias,
             setNoticias,
             guardarNoticia,
-            eliminarNoticia
+            eliminarNoticia,
+            setEdicion,
+            noticia,
         }}>
 
             {children}

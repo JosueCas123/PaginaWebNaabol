@@ -14,16 +14,16 @@ export const Table = () => {
 
         <table  className="w-full scroll-x-1">
                 <thead>
-                    <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                         <th class="py-3 px-6 text-left">FECHA</th>
-                         <th class="py-3 px-6 text-left">TITULO</th>
+                    <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal ">
+                         <th class="py-3 px-6  text-center">FECHA</th>
+                         <th class="py-3 px-6 text-center">TITULO</th>
                          <th class="py-3 px-6 text-center">IMGEN</th>
                          <th class="py-3 px-6 text-center">DESCRIPCION</th>
                          <th class="py-3 px-6 text-center">ACCION</th>
                     </tr>
                 </thead>
 
-            <tbody class="text-gray-600 text-sm font-light border-spacing-1 " >
+            <tbody class="w-full text-gray-600 text-sm font-light border-spacing-1 border-2  " >
                 {
                    noticias.map(noticia => (
                     <ContendoTable
