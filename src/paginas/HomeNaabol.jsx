@@ -207,6 +207,9 @@ export const HomeNaabol = () => {
             </div>
           </div>
         </div>
+        <button class="fixed bottom-0 left-0  p-4 bg-black text-white rounded-tl-lg">
+          Botón
+        </button>
 
         <section className="lg:w-11/12 lg:mx-auto">
           <CardGerencia />

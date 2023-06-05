@@ -28,19 +28,35 @@ export const Header = () => {
               Iniciar Secion
             </Link>
 
-            <Link className=" link text-white  " to="https://www.facebook.com/">
+            <Link
+              target="_blank"
+              className=" link text-white  "
+              to="https://www.facebook.com/"
+            >
               <i className="bx bxl-instagram"></i>
             </Link>
-            <Link className="link text-white">
+            <Link target="_blank" className="link text-white">
               <i class="bx bxl-facebook"></i>
             </Link>
-            <Link className="link text-white">
+            <Link
+              target="_blank"
+              to="https://twitter.com/NaabolBolivia"
+              className="link text-white"
+            >
               <i class="bx bxl-twitter"></i>
             </Link>
-            <Link className="link text-white">
+            <Link
+              target="_blank"
+              to="https://www.youtube.com/channel/UC8BzYgsshRMTBmheyYs3lSQ/videos "
+              className="link text-white"
+            >
               <i class="bx bxl-youtube"></i>
             </Link>
-            <Link className="link text-white">
+            <Link
+              to="https://www.tiktok.com/@naabolbolivia"
+              target="_blank"
+              className="link text-white"
+            >
               <i class="bx bxl-tiktok"></i>
             </Link>
           </div>

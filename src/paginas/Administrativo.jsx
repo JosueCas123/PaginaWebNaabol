@@ -101,7 +101,7 @@ export const Administrativo = () => {
           </div>
           {/* */}
           <div className="flex justify-center flex-wrap">
-            <div className="border-2 w-52 h-68 rounded-2xl   flex flex-col m-5">
+            <div className="border-2 w-52 h-68 rounded-2xl   flex flex-col m-5 bg-white">
               <div className="bg-green-600 w-full h-20 rounded-t-2xl "></div>
 
               <div className="flex justify-center ">
@@ -118,7 +118,7 @@ export const Administrativo = () => {
                 </p>
               </div>
             </div>
-            <div className="border-2 w-52 h-68 rounded-2xl   flex flex-col m-5">
+            <div className="border-2 w-52 h-68 rounded-2xl   flex flex-col m-5 bg-white">
               <div className="bg-green-600 w-full h-20 rounded-t-2xl "></div>
 
               <div className="flex justify-center ">
@@ -135,7 +135,7 @@ export const Administrativo = () => {
                 </p>
               </div>
             </div>
-            <div className="border-2 w-52 h-68 rounded-2xl   flex flex-col m-5">
+            <div className="border-2 w-52 h-68 rounded-2xl   flex flex-col m-5 bg-white">
               <div className="bg-green-600 w-full h-20 rounded-t-2xl "></div>
 
               <div className="flex justify-center ">
@@ -152,7 +152,7 @@ export const Administrativo = () => {
                 </p>
               </div>
             </div>
-            <div className="border-2 w-52 h-68 rounded-2xl   flex flex-col m-5">
+            <div className="border-2 w-52 h-68 rounded-2xl   flex flex-col m-5 bg-white">
               <div className="bg-green-600 w-full h-20 rounded-t-2xl "></div>
 
               <div className="flex justify-center ">
