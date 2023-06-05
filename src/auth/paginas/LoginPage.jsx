@@ -8,15 +8,15 @@ export const LoginPage = () => {
 
     const navigate = useNavigate()
     const [usuario, setUsuario] = useState('')
-    const [contraseña, setContraseña] = useState('')
+    const [passport, setPassport] = useState('')
     const [alerta, setAlerta] = useState({})
     const {setAuth} =  useAuth()
     
     const handleSubmit = async(e) => {
         console.log('enviado')
         e.preventDefault();
-        console.log({usuario,contraseña})
-        if ([usuario, contraseña].includes('')) {
+        console.log({usuario,passport})
+        if ([usuario, passport].includes('')) {
             setAlerta({
               msg: 'todos los campos son obligatorios',
               error: true
@@ -33,13 +33,13 @@ export const LoginPage = () => {
             
         }
         try {
-            const url = 'http://10.12.100.248:8000/api/login'
+            const url = 'http://127.0.0.1:8000/api/login'
             
             try {
-                console.log(JSON.stringify(usuario, contraseña))
+                console.log(JSON.stringify(usuario, passport))
                 const response = await fetch(url, {
                     method: 'POST',
-                    body: JSON.stringify({usuario, contraseña}),
+                    body: JSON.stringify({usuario, passport}),
                     // data puede ser string o un objeto
         
                     headers: {
@@ -47,6 +47,8 @@ export const LoginPage = () => {
                         // Y le decimos que los datos se enviaran como JSON
                     }
                 });
+
+                
                 // Verificar el estado de la respuesta
                 if (response.ok) {
                     // La solicitud fue exitosa (código de estado 200-299)
@@ -63,6 +65,7 @@ export const LoginPage = () => {
             } catch (error) {
                 console.log(error);
             }
+            
             
         } catch (error) {
             console.log(error)
@@ -95,8 +98,8 @@ export const LoginPage = () => {
                                 <div className="mb-4 text-lg">
                                 <input 
                                     className="w-full rounded-xl border-none bg-white bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="Password" 
-                                    value={contraseña} 
-                                    onChange={e => setContraseña(e.target.value)}
+                                    value={passport} 
+                                    onChange={e => setPassport(e.target.value)}
                                     placeholder="Ingrese Contraseña" />
                                 </div>
                                 <div className="mt-8 flex justify-center text-lg text-black">

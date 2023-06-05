@@ -1,51 +1,64 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import useUser from '../../hooks/useUser'
+import { Link } from 'react-router-dom'
+import { formatearFecha } from '../../helpers/fechaFormateada'
 
 export const ContendoTable = ({noticia}) => {
 
-    const {eliminarNoticia} = useUser()
+    const {eliminarNoticia, setEdicion} = useUser()
     const {titulo, fecha, descripcion, imagen, id} = noticia
+
+    const newDescripcion = useMemo(() => {
+        return descripcion.length > 30
+            ? descripcion.substring(0,30) + '......'
+            :descripcion
+    },[descripcion])
+
   return (
   <>
   
-         <tr class="sec2n__tr" data-cliente={id} >
+         <tr class="border-b-2" data-cliente={id} >
            
-           <td class="sec2n__td">
+           <td class="flex justify-center items-center">
                <p class="sec2n__titulo">
-                {fecha}
+                {formatearFecha(fecha)}
                </p>
            </td>
-           <td class="sec2n__td">
-               <p class="sec2n__titulo">
+           <td class="">
+               <p class="text-center font-medium">
                     {titulo}
                </p>
            </td>
-           <td class="sec2n__td">
-               <div class="sec2n__img">
-               <img className=' w-10 bg-cover bg-center justify-center items-center' src={imagen}  alt=""/>
+           <td class="flex justify-center items-center">
+               <div class="">
+               <img className=' w-20 bg-cover bg-center items-center' src={imagen}  alt=""/>
                </div>
            </td>
-           <td class="sec2n__td">
-               <p class="sec2n__descript">
-               {descripcion}
+           <td class="">
+               <p class=" font-medium">
+               {newDescripcion}
                </p>
            </td>
-           <td class="sec2n__td">
-               <div class="sec2n__note">
-               <button class="btne" onclick="editarUrse()">
-                   <i class='bx bxs-edit'></i>
-               </button>
+           <td class="w-10 text-center space-y-1">
+               <div class="">
+                <Link
+                    to='/formulario'
+                >
+                    <button class=" bg-blue-700 pr-3 pl-3 pt-1 pb-1 text-white rounded-sm font-medium" onClick={() => setEdicion(noticia)}>
+                        Editar
+                    </button>
+                </Link>
                </div>
-           </td>
-           <td class="sec2n__td">
-               <div class="sec2n__delete">
+               <div class="">
                <button
-                onClick={() => eliminarNoticia(id)}
-               >
-                   <i class='bx bxs-coffee-togo eliminar'></i>
+               className=' bg-red-500 p-1 text-white rounded-sm font-medium'
+                onClick={() => eliminarNoticia(noticia)}
+               > 
+                   Eliminar
                </button>
                </div>
            </td>
+           
        
        </tr>
   
