@@ -68,9 +68,18 @@ export const Formulario = () => {
           console.log(info)
          // console.log(base64)
   
-          setAlerta({})
-          guardarNoticia(info, id)
+         guardarNoticia(info, id)
+         setAlerta({
+            msg:"Gurdado correctamente"
+         })
           
+         setTimeout(() => {
+            setAlerta({
+              
+                msg:""
+            })
+        },3000)
+
     
         }
         reader.readAsDataURL(imagen);
@@ -150,7 +159,7 @@ export const Formulario = () => {
                 <input 
                     type='submit' 
                     class="p-3 bg-blue-500 text-white cursor-pointer hover:bg-blue-400"
-                    value='Enviar'
+                    value={id ? 'Guardar Cambios' : 'Agregar Noticia Nueva'}
                 />
                 
 

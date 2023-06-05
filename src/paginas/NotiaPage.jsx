@@ -4,6 +4,7 @@ import { RedesSociales } from '../components/RedesSociales'
 import { Link, useNavigate, useParams, Navigate } from 'react-router-dom'
 import useUser from '../hooks/useUser'
 import { Foot } from '../components/Foot'
+import { formatearFecha } from '../helpers/fechaFormateada'
 
 export const NotiaPage = () => {
   const params = useParams()
@@ -16,6 +17,7 @@ export const NotiaPage = () => {
   const noticia = useMemo(() => noticias.find(noticia => noticia.id === id), [id, noticias])
 
   const onNavigateRegresar = () => {
+    console.log("hola")
     navigate(-1);
   }
 
@@ -31,7 +33,7 @@ export const NotiaPage = () => {
   return (
     <>
       <Header />
-      <div className=' xl:flex xl:flex-row gap-28 flex justify-center flex-col-reverse w-10/12 mx-auto'>
+      <div className=' mt-32 mb-32 xl:flex xl:flex-row gap-28 flex justify-center flex-col-reverse w-10/12 mx-auto'>
         <RedesSociales />
         <div className="xl:w-2/4 shadow-md  my-5 p-2  ">
           <div>
@@ -46,14 +48,16 @@ export const NotiaPage = () => {
               {noticia.titulo}
             </h5>
             <div className="mt-2">
-              <p className="text-sm font-normal">{noticia.fecha}</p>
+              <p className="text-sm font-normal">{formatearFecha(noticia.fecha)}</p>
             </div>
             <p className="pt-4 text-justify text-base font-mediumpy-2 ">
               {noticia.descripcion}
             </p>
           </div>
-        <div>
-          <button onClick={() => {onNavigateRegresar}}>
+        <div className='flex  flex-row-reverse mt-3 mb-3'>
+          <button
+            className=' bg-blue-700 p-2 text-white rounded-md' 
+            onClick={onNavigateRegresar}>
             Volver atrás
           </button>
         </div>

@@ -25,17 +25,17 @@ export const ContendoTable = ({noticia}) => {
                </p>
            </td>
            <td class="">
-               <p class="text-center">
+               <p class="text-center font-medium">
                     {titulo}
                </p>
            </td>
            <td class="flex justify-center items-center">
                <div class="">
-               <img className=' w-16 bg-cover bg-center items-center' src={imagen}  alt=""/>
+               <img className=' w-20 bg-cover bg-center items-center' src={imagen}  alt=""/>
                </div>
            </td>
            <td class="">
-               <p class="sec2n__descript">
+               <p class=" font-medium">
                {newDescripcion}
                </p>
            </td>

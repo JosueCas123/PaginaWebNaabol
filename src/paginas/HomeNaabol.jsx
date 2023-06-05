@@ -6,9 +6,13 @@ import { Header } from "../components/Header";
 
 import { Foot } from "../components/Foot";
 import { Link } from "react-router-dom";
+import { NoticiaDestacada } from "../components/NoticiaDestacada";
+import useUser from "../hooks/useUser";
+import { RedesSociales } from "../components/RedesSociales";
 
 
 export const HomeNaabol = () => {
+  const {noticias} =useUser()
   return (
     <>
       <Header />
@@ -167,7 +171,49 @@ export const HomeNaabol = () => {
     
         <section className="lg:w-11/12 lg:mx-auto">
           <CardGerencia />
-          <CardNoticias />
+          <div className="flex flex-row-reverse">
+            <button 
+              className="  bg-blue-700 p-2 text-white rounded-lg text-sm "
+            >
+              Ver mas..
+            </button>
+          </div>
+          <div className='w-auto md:w-11/12 mt-5 mx-auto'>
+                <h2 className="text-xl font-semibold">Noticias destacadas</h2>
+            <div className=" w-auto h-80 items-center my-10 overflow-x-auto overscroll-x-contain  space-x-6  flex justify-center md:flex md:space-x-5 box-border mx-auto hidden:space-y-5 overflow-hidden" id='Noticias_descatadas'>
+            {
+                        noticias.map(noticia  => (
+                            <NoticiaDestacada
+                              key={noticia.id}
+                              noticia={noticia}
+                            />
+                        ))
+                    }
+            </div>
+
+
+            
+                    
+        </div>
+        <div className="flex flex-row-reverse">
+            <button 
+              className="  bg-blue-700 p-2 text-white rounded-lg text-sm "
+            >
+              Ver mas..
+            </button>
+          </div>
+        <section className=" mb-20 md:w-11/12 mx-auto">
+          <h2 className="text-xl font-semibold">Redes Sociales</h2>
+          <div className="flex justify-around">
+            <div>
+              <RedesSociales/>  
+            </div>
+            <div>
+            <iframe width="700" height="450" src="https://www.youtube.com/embed/Z2XE8DJuoZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+          </div>
+        </section>
         </section>
       </section>
       <Foot />

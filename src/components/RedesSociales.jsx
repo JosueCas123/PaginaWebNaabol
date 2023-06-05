@@ -4,7 +4,7 @@ export const RedesSociales = () => {
   return (
     <>
         <div className='flex flex-col xl:w1/5' >
-        <h1>Noticas mas</h1>
+        <h1 className=' text-sm font-medium mb-5'>Siguenos en nuestras redes Sociales</h1>
                 <iframe
             id="twitter-widget-0"
             scrolling="no"
@@ -15,8 +15,8 @@ export const RedesSociales = () => {
             style={{
                 position: 'static',
                 visibility: 'visible',
-                width: '300px',
-                height: '400px',
+                width: '350px',
+                height: '450px',
                 display: 'block',
                 flexGrow: '1',
             }}
