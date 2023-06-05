@@ -14,9 +14,7 @@ import { Formulario } from '../administrador/components/Formulario'
 
 export const AppRouter = () => {
   return (
-    <>
-
-   
+    <>   
         <Routes>
             <Route path='HomeNaabol' element={<HomeNaabol/>} />
             <Route path='/Noticias' element={<Noticias/>} />
