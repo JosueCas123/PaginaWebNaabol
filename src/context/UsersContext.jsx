@@ -93,7 +93,7 @@ export const UsersProvider = ({children}) => {
                 })
                 const data = await response.json()
 
-                console.log(data)
+                console.log(data.noticia)
 
                 const noticiaActualizada = noticias.map(noticiaState => noticiaState.id === data.id ? data : noticiaState)
                 setNoticias(noticiaActualizada)
