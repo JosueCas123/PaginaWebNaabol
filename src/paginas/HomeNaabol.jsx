@@ -9,10 +9,10 @@ import { Link } from "react-router-dom";
 import { NoticiaDestacada } from "../components/NoticiaDestacada";
 import useUser from "../hooks/useUser";
 import { RedesSociales } from "../components/RedesSociales";
-
+import { Meta } from "../components/meta";
 
 export const HomeNaabol = () => {
-  const {noticias} =useUser()
+  const { noticias } = useUser();
   return (
     <>
       <Header />
@@ -44,15 +44,38 @@ export const HomeNaabol = () => {
                     href=""
                     className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
                   >
-                    <div className="">
-                      <img
-                        src="../src/img/icon1.png"
-                        alt=""
-                        className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
-                      />
+                    <div className=" ">
+                      <i className="rounded-full  text-4xl p-1 border-4 border-blue-900 bx bx-world bg-black sm:text-6xl lg:text-6xl"></i>
                     </div>
                     <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
                       <p className="text-xs sm:text-sm">AERONÁUTICA</p>
+                    </div>
+                  </a>
+                </Link>
+                <Link to="/Administrativo">
+                  <a
+                    href=""
+                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                  >
+                    <div className="">
+                      <i className="rounded-full  text-4xl p-1 border-4 border-blue-900 bx bx-building-house  bg-black sm:text-6xl lg:text-6xl"></i>
+                    </div>
+                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                      <p className="text-xs sm:text-sm">ADMINISTRATIVA</p>
+                    </div>
+                  </a>
+                </Link>
+
+                <Link to="/Legal">
+                  <a
+                    href=""
+                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                  >
+                    <div className="">
+                      <i className="bx bx-file rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
+                    </div>
+                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                      <p className="text-xs sm:text-sm">LEGAL</p>
                     </div>
                   </a>
                 </Link>
@@ -61,11 +84,18 @@ export const HomeNaabol = () => {
                   className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
                 >
                   <div className="">
-                    <img
-                      src="../src/img/icon2.png"
-                      alt=""
-                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
-                    />
+                    <i class="bx bx-file-find rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
+                  </div>
+                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                    <p className="text-xs sm:text-sm">TRANSPARENCIA</p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                >
+                  <div className="">
+                    <i class="bx bxs-plane-alt rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
                   </div>
                   <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
                     <p className="text-xs sm:text-sm">AERONÁUTICA</p>
@@ -76,136 +106,85 @@ export const HomeNaabol = () => {
                   className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
                 >
                   <div className="">
-                    <img
-                      src="../src/img/icon3.png"
-                      alt=""
-                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
-                    />
+                    <i class="bx bx-id-card rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
                   </div>
                   <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
+                    <p className="text-xs sm:text-sm">CREDENCIALES</p>
                   </div>
                 </a>
-                <a
-                  href=""
-                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                >
-                  <div className="">
-                    <img
-                      src="../src/img/icon4.png"
-                      alt=""
-                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
-                    />
-                  </div>
-                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
-                  </div>
-                </a>
-                <a
-                  href=""
-                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                >
-                  <div className="">
-                    <img
-                      src="../src/img/icon5.png"
-                      alt=""
-                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
-                    />
-                  </div>
-                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
-                  </div>
-                </a>
-                <a
-                  href=""
-                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                >
-                  <div className="">
-                    <img
-                      src="../src/img/icon6.png"
-                      alt=""
-                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
-                    />
-                  </div>
-                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
-                  </div>
-                </a>
-                <a
-                  to="/Pasajeros"
-                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                >
-                  <div className="">
-                    <img
-                      src="../src/img/icon7.png"
-                      alt=""
-                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
-                    />
-                  </div>
-                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
-                  </div>
-                </a>
-                <a
-                  href=""
-                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                >
-                  <div className="">
-                    <img
-                      src="../src/img/icon8.png"
-                      alt=""
-                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
-                    />
-                  </div>
-                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
-                  </div>
-                </a>
+                <Link to="/Aeropuerto">
+                  <a
+                    to="/Pasajeros"
+                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                  >
+                    <div className="">
+                      <i class="bx bx-map-alt rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
+                    </div>
+                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                      <p className="text-xs sm:text-sm">PLANIFICA TU VIAJE</p>
+                    </div>
+                  </a>
+                </Link>
+                <Link to="">
+                  <a
+                    href=""
+                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                  >
+                    <div className="">
+                      <i class="bx bx-user-voice rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
+                    </div>
+                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                      <p className="text-xs sm:text-sm">INFO PASAJEROS</p>
+                    </div>
+                  </a>
+                </Link>
               </div>
-                 
-              <div className="flex justify-center flex-wrap  text-white  items-center fle my-6 sm:my-8">
-              </div>
+
+              <div className="flex justify-center flex-wrap  text-white  items-center fle my-6 sm:my-8"></div>
             </div>
           </div>
         </div>
-    
-        <section className="lg:w-11/12 lg:mx-auto">
+
+        <Meta />
+
+        <section className="lg:w-11/12 lg:mx-auto max-w-screen-2xl">
           <CardGerencia />
           <div>
-            <button >
-              Ver mas..
-            </button>
+            <button>Ver mas..</button>
           </div>
-          <div className='w-auto md:w-11/12 mt-5 mx-auto'>
-                <h2 className="text-xl font-semibold">Noticias destacadas</h2>
-            <div className=" w-auto h-80 items-center my-10 overflow-x-auto overscroll-x-contain  space-x-6  flex justify-center md:flex md:space-x-5 box-border mx-auto hidden:space-y-5 overflow-hidden" id='Noticias_descatadas'>
-            {
-                        noticias.map(noticia  => (
-                            <NoticiaDestacada
-                              key={noticia.id}
-                              noticia={noticia}
-                            />
-                        ))
-                    }
+          <div className="max-w-screen-2xl ">
+            <h2 className="text-xl font-semibold  ">Noticias destacadas</h2>
+            <div
+              className=" w-auto h-80 items-center my-10 overflow-x-auto overscroll-x-contain  space-x-6  flex justify-center md:flex md:space-x-5 box-border mx-auto hidden:space-y-5 overflow-hidden"
+              id="Noticias_descatadas"
+            >
+              {noticias.map((noticia) => (
+                <NoticiaDestacada key={noticia.id} noticia={noticia} />
+              ))}
             </div>
-
-
-            
-    
-        </div>
-
-        <section className=" mb-20 md:w-11/12 mx-auto">
-          <h2 className="text-xl font-semibold">Redes Sociales</h2>
-          <div className="flex justify-around">
-            <div>
-              <RedesSociales/>  
-            </div>
-            <div>
-            <iframe width="700" height="450" src="https://www.youtube.com/embed/Z2XE8DJuoZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-
           </div>
-        </section>
+
+          <section className=" mb-20 md:w-11/12 mx-auto">
+            <h2 className="text-xl font-bold my-4 text-center">
+              Redes Sociales
+            </h2>
+            <div className="flex flex-col justify-center items-center sm:flex-row justify-around">
+              <div className="my-8">
+                <RedesSociales />
+              </div>
+              <div className="flex items-center justify-center my-5">
+                <iframe
+                  width="350"
+                  height="250"
+                  src="https://www.youtube.com/embed/Z2XE8DJuoZA"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </section>
         </section>
       </section>
       <Foot />
