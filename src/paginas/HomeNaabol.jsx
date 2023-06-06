@@ -16,15 +16,9 @@ export const HomeNaabol = () => {
   return (
     <>
       <Header />
-<<<<<<< HEAD
       <section className="w-full  ">
         <div className="w-full flex flex-col- justify-evenly h-full bg-HomeImg bg-cover object-cover bg-center  lg:bg-cover lg:bg-center lg:bg-no-repet ">
           <div className=" w-10/12 h-full  mx-auto flex flex-col justify-evenly py-10 mb-40 mt-40">
-=======
-      <section className="w-full   ">
-        <div className="w-full flex flex-col- justify-evenly h-full bg-HomeImg bg-cover bg-center sm:py-12 md:py-20 lg:bg-HomeImg lg:bg-cover lg:bg-center lg:bg-no-repet lg:py-40">
-          <div className=" w-10/12 h-full  mx-auto flex flex-col justify-evenly py-10">
->>>>>>> maik
             <div className=" flex  text-white  flex-col sm:flex-row sm:justify-between  sm:items-center  ">
               <div className=" ">
                 <p className="my-3 text-2xl sm:text-3xl  lg:text-4xl">
@@ -45,7 +39,7 @@ export const HomeNaabol = () => {
 
             <div className="flex  flex-wrap  text-white  items-center flex-col ">
               <div className="flex justify-center flex-wrap  text-white  items-center sm:my-6 lg:my-8 ">
-                <Link to="/Aeropuerto">
+                <Link to="/Administrativa">
                   <a
                     href=""
                     className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
@@ -62,58 +56,51 @@ export const HomeNaabol = () => {
                     </div>
                   </a>
                 </Link>
-                <Link to="/Administrativa">
-                  <a
-                    href=""
-                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                  >
-                    <div className="">
-                      <img
-                        src="../src/img/icon2.png"
-                        alt=""
-                        className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
-                      />
-                    </div>
-                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                      <p className="text-xs sm:text-sm">AERONÁUTICA</p>
-                    </div>
-                  </a>
-                </Link>
-
-                <Link to="/Legal">
-                  <a
-                    href=""
-                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                  >
-                    <div className="">
-                      <img
-                        src="../src/img/icon3.png"
-                        alt=""
-                        className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
-                      />
-                    </div>
-                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                      <p className="text-xs sm:text-sm">AERONÁUTICA</p>
-                    </div>
-                  </a>
-                </Link>
-                <Link to="">
-                  <a
-                    href=""
-                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                  >
-                    <div className="">
-                      <img
-                        src="../src/img/icon4.png"
-                        alt=""
-                        className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
-                      />
-                    </div>
-                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                      <p className="text-xs sm:text-sm">AERONÁUTICA</p>
-                    </div>
-                  </a>
-                </Link>
+                <a
+                  href=""
+                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon2.png"
+                      alt=""
+                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon3.png"
+                      alt=""
+                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon4.png"
+                      alt=""
+                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
+                  </div>
+                </a>
                 <a
                   href=""
                   className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
@@ -181,20 +168,11 @@ export const HomeNaabol = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
     
-=======
-        <button class="fixed bottom-0 left-0  p-4 bg-black text-white rounded-tl-lg">
-          Botón
-        </button>
-
->>>>>>> maik
         <section className="lg:w-11/12 lg:mx-auto">
           <CardGerencia />
-          <div className="flex flex-row-reverse">
-            <button 
-              className="  bg-blue-700 p-2 text-white rounded-lg text-sm "
-            >
+          <div>
+            <button >
               Ver mas..
             </button>
           </div>
@@ -213,15 +191,9 @@ export const HomeNaabol = () => {
 
 
             
-                    
+    
         </div>
-        <div className="flex flex-row-reverse">
-            <button 
-              className="  bg-blue-700 p-2 text-white rounded-lg text-sm "
-            >
-              Ver mas..
-            </button>
-          </div>
+
         <section className=" mb-20 md:w-11/12 mx-auto">
           <h2 className="text-xl font-semibold">Redes Sociales</h2>
           <div className="flex justify-around">

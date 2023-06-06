@@ -33,7 +33,7 @@ export const LoginPage = () => {
             
         }
         try {
-            const url = 'http://127.0.0.1:8000/api/login'
+            const url = 'http://10.12.100.181:8000/api/login'
             
             try {
                 console.log(JSON.stringify(usuario, passport))
@@ -55,7 +55,7 @@ export const LoginPage = () => {
                     const data = await response.json();
                     // Realizar alguna acción con los datos de respuesta
                      console.log(data);
-                    
+                        setAuth(data)
                     localStorage.setItem('token', data.token)
                     navigate('/Administrador');
                 } else {
