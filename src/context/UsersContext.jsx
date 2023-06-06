@@ -18,7 +18,7 @@ export const UsersProvider = ({children}) => {
 
           try {
 
-            const url = 'http://10.12.100.181/api/noticias/area';
+            const url = 'http://10.12.100.181:8000/api/noticias_area';
             const token = localStorage.getItem('token');
 
              const response = await fetch(url, {
@@ -80,7 +80,7 @@ export const UsersProvider = ({children}) => {
       const guardarNoticia = async(noticia, id) => {
 
         if (id) {
-          const urlEdit = `http://10.12.100.181/api/editar/${id}`
+          const urlEdit = `http://10.12.100.181:8000/api/noticia_update/${id}`
             const token = localStorage.getItem('token');
             try {
               const response = await fetch(urlEdit, {
@@ -105,7 +105,7 @@ export const UsersProvider = ({children}) => {
 
         }else{
           try {
-              const url = 'http://127.0.0.1:8000/api/noticia';
+              const url = 'http://10.12.100.181:8000/api/noticia_create';
           const token = localStorage.getItem('token');
   
              const response = await fetch(url, {
