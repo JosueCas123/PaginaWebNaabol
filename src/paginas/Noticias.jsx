@@ -39,7 +39,7 @@ export const Noticias = () => {
     
         </div>
 
-        <NoticiaVer noticia={noticias}/>
+        <NoticiaVer noticia={dataNoticia }/>
 
       <Foot />
 

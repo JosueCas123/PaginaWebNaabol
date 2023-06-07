@@ -33,7 +33,7 @@ export const NotiaPage = () => {
   return (
     <>
       <Header />
-      <div className=' mt-32 mb-32 xl:flex xl:flex-row gap-28 flex justify-center flex-col-reverse w-10/12 mx-auto'>
+      <div className=' xl:flex xl:flex-row gap-28 flex justify-center flex-col-reverse w-10/12 mx-auto'>
         <RedesSociales />
         <div className="xl:w-2/4 shadow-md  my-5 p-2  ">
           <div>
