@@ -144,10 +144,8 @@ export const HomeNaabol = () => {
             </div>
           </div>
         </div>
-
         <Meta />
-
-        <section className="lg:w-11/12 lg:mx-auto max-w-screen-2xl">
+        <section className="lg:w-11/12 lg:mx-auto">
           <CardGerencia />
           <div>
             <button>Ver mas..</button>
