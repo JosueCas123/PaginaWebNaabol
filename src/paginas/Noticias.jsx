@@ -9,11 +9,11 @@ import { formatearFecha } from "../helpers/fechaFormateada";
 import { NoticiaDestacada } from "../components/NoticiaDestacada";
 
 export const Noticias = () => {
-  const { noticias } = useUser();
+  const { dataNoticia } = useUser();
   
-  console.log(noticias)
+  console.log(dataNoticia)
 
-  const {id} = noticias
+  const {id} = dataNoticia
   
   console.log(id)
   
@@ -25,7 +25,7 @@ export const Noticias = () => {
                 <h2 className="text-xl font-semibold">Noticias destacadas</h2>
             <div className=" w-auto h-80 items-center my-10 overflow-x-auto overscroll-x-contain  space-x-6  flex justify-center md:flex md:space-x-5 box-border mx-auto hidden:space-y-5 overflow-hidden" id='Noticias_descatadas'>
             {
-                        noticias.map(noticia  => (
+                        dataNoticia.map(noticia  => (
                             <NoticiaDestacada
                               key={noticia.id}
                               noticia={noticia}

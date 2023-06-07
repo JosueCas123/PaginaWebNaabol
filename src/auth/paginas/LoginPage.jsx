@@ -33,7 +33,7 @@ export const LoginPage = () => {
             
         }
         try {
-            const url = 'http://10.12.100.181:8000/api/login'
+            const url = 'http://10.12.100.201:8000/api/login'
             
             try {
                 console.log(JSON.stringify(usuario, passport))

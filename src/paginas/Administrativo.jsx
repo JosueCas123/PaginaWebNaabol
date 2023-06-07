@@ -16,7 +16,7 @@ export const Administrativo = () => {
       <section className="w-full py-8 bg-slate-100">
         <div className="w-11/12 mx-auto max-w-screen-2xl">
           <div className="">
-            <h3 className="text-center font-bold my-3 text-3xl"> Jefes</h3>
+            <h3 className="text-center font-bold my-3 text-3xl">Direccion General</h3>
             <hr className="bg-slate-600 h-2 my-4 w-1/4 mx-auto lg:w-1/5" />
           </div>
           {/* */}
@@ -32,9 +32,9 @@ export const Administrativo = () => {
                 />
               </div>
               <div className=" flex flex-col  p-2 items-center -translate-y-10">
-                <h6 className="text-violet-600">Genesys Rondón</h6>
+                <h6 className="text-violet-600">Director Ejecutivo</h6>
                 <p className="text-center">
-                  Desarrolladora de software e instructora
+                  Elmer Pozo Oliva
                 </p>
               </div>
             </div>
@@ -96,7 +96,7 @@ export const Administrativo = () => {
       <section className="w-full py-8 bg-green-100">
         <div className="w-11/12 mx-auto max-w-screen-2xl">
           <div className="">
-            <h3 className="text-center font-bold my-3 text-3xl"> Jefes</h3>
+            <h3 className="text-center font-bold my-3 text-3xl">Direccion General</h3>
             <hr className="bg-green-600 h-2 my-4 w-1/4 mx-auto lg:w-1/5" />
           </div>
           {/* */}

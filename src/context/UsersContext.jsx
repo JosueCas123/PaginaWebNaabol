@@ -8,8 +8,10 @@ export const UsersProvider = ({children}) => {
     const {auth} = useAuth()
     const [noticias, setNoticias] = useState([])
     const [noticia, setNoticia] = useState({})
+    const [dataNoticia, setDataNoticia] = useState([])
 
 
+    console.log(dataNoticia)
     console.log(noticias)
 
 
@@ -18,7 +20,7 @@ export const UsersProvider = ({children}) => {
 
           try {
 
-            const url = 'http://10.12.100.181:8000/api/noticias_area';
+            const url = 'http://10.12.100.201:8000/api/noticias_area';
             const token = localStorage.getItem('token');
 
              const response = await fetch(url, {
@@ -45,42 +47,41 @@ export const UsersProvider = ({children}) => {
       }, [auth])
 
 
-    // useEffect(() => {
-    //     const obtenerDestacadas = async() => {
 
-    //       try {
+    useEffect(() => {
+        const obtenerNoticias = async() => {
 
-    //         const url = 'http://10.12.100.67:8000/api/noticias/destacadas';
-    //         const token = localStorage.getItem('token');
+          try {
 
-    //          const response = await fetch(url, {
-    //           method: 'GET',
-    //           headers: {
-    //             'Authorization': `Bearer ${token}`,
-    //             'Content-Type': 'application/json'
-    //           },
+            const url = 'http://10.12.100.201:8000/api/noticias';
+          
+             const response = await fetch(url, {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json'
+              },
 
-    //         })
-    //         const {data} = await response.json()
+            })
+            const {data} = await response.json()
 
-    //        console.log(data)
+          console.log(data)
 
-    //          setNoticias(data)
+          setDataNoticia(data)
 
-    //       } catch (error) {
-    //           console.log(error)
-    //       }
-    //     }
+          } catch (error) {
+              console.log(error)
+          }
+        }
 
-    //     obtenerNoticias()
+        obtenerNoticias()
 
-    //   }, [auth])
+      }, [])
 
 
       const guardarNoticia = async(noticia, id) => {
 
         if (id) {
-          const urlEdit = `http://10.12.100.181:8000/api/noticia_update/${id}`
+          const urlEdit = `http://10.12.100.201:8000/api/noticia_update/${id}`
             const token = localStorage.getItem('token');
             try {
               const response = await fetch(urlEdit, {
@@ -105,7 +106,7 @@ export const UsersProvider = ({children}) => {
 
         }else{
           try {
-              const url = 'http://10.12.100.181:8000/api/noticia_create';
+              const url = 'http://10.12.100.201:8000/api/noticia_create';
           const token = localStorage.getItem('token');
   
              const response = await fetch(url, {
@@ -143,7 +144,7 @@ export const UsersProvider = ({children}) => {
         console.log(id)
         const confirmar = confirm('Confimar que deseas eliminar?')
         if(confirmar){
-            const urlNoticia = `http://127.0.0.1:8000/api/eliminar/noticia/${id}`
+            const urlNoticia = `http://10.12.100.201:8000/api/eliminar/noticia/${id}`
             const token = localStorage.getItem('token');
             try {
                const response = await fetch(urlNoticia, {
@@ -176,6 +177,7 @@ export const UsersProvider = ({children}) => {
             guardarNoticia,
             eliminarNoticia,
             setEdicion,
+            dataNoticia,
             noticia,
         }}>
 

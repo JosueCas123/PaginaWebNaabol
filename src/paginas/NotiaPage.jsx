@@ -12,9 +12,9 @@ export const NotiaPage = () => {
   
   const navigate = useNavigate()
 
-  const { noticias } = useUser()
-
-  const noticia = useMemo(() => noticias.find(noticia => noticia.id === id), [id, noticias])
+  const { dataNoticia } = useUser()
+  console.log(dataNoticia)
+  const noticia = useMemo(() => dataNoticia.find(noticia => noticia.id === id), [id, dataNoticia])
 
   const onNavigateRegresar = () => {
     console.log("hola")
