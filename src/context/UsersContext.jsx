@@ -144,7 +144,7 @@ export const UsersProvider = ({children}) => {
         console.log(id)
         const confirmar = confirm('Confimar que deseas eliminar?')
         if(confirmar){
-            const urlNoticia = `http://10.12.100.201:8000/api/eliminar/noticia/${id}`
+            const urlNoticia = `http://10.12.100.201:8000/api/noticia_delete/${id}`
             const token = localStorage.getItem('token');
             try {
                const response = await fetch(urlNoticia, {
