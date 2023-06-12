@@ -5,7 +5,7 @@ import { ContendoTable } from './ContendoTable'
 export const Table = () => {
 
     const {noticias} = useUser()
- 
+    console.log(noticias)
 
   return (
 

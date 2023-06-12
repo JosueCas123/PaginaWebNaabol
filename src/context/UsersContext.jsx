@@ -20,7 +20,7 @@ export const UsersProvider = ({children}) => {
 
           try {
 
-            const url = 'http://10.12.100.201:8000/api/noticias_area';
+            const url = 'http://10.12.100.30:8000/api/noticias';
             const token = localStorage.getItem('token');
 
              const response = await fetch(url, {
@@ -53,7 +53,7 @@ export const UsersProvider = ({children}) => {
 
           try {
 
-            const url = 'http://10.12.100.201:8000/api/noticias';
+            const url = 'http://10.12.100.30:8000/api/noticias';
           
              const response = await fetch(url, {
               method: 'GET',
@@ -81,7 +81,7 @@ export const UsersProvider = ({children}) => {
       const guardarNoticia = async(noticia, id) => {
 
         if (id) {
-          const urlEdit = `http://10.12.100.201:8000/api/noticia_update/${id}`
+          const urlEdit = `http://10.12.100.30:8000/api/noticia_update/${id}`
             const token = localStorage.getItem('token');
             try {
               const response = await fetch(urlEdit, {
@@ -106,7 +106,7 @@ export const UsersProvider = ({children}) => {
 
         }else{
           try {
-              const url = 'http://10.12.100.201:8000/api/noticia_create';
+              const url = 'http://10.12.100.30:8000/api/noticia_create';
           const token = localStorage.getItem('token');
   
              const response = await fetch(url, {
@@ -144,7 +144,7 @@ export const UsersProvider = ({children}) => {
         console.log(id)
         const confirmar = confirm('Confimar que deseas eliminar?')
         if(confirmar){
-            const urlNoticia = `http://10.12.100.201:8000/api/noticia_delete/${id}`
+            const urlNoticia = `http://10.12.100.30:8000/api/noticia_delete/${id}`
             const token = localStorage.getItem('token');
             try {
                const response = await fetch(urlNoticia, {

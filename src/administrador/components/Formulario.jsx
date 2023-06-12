@@ -15,6 +15,8 @@ export const Formulario = () => {
     const [id, setId] = useState(null)
     const {guardarNoticia, noticia} = useUser()
 
+    
+
     useEffect(() => {
 
         if (noticia?.titulo) {
@@ -22,6 +24,9 @@ export const Formulario = () => {
                 setDescripcion(noticia.descripcion)
                 setSelectValue(noticia.selectValue)
                 setId(noticia.id)
+               
+               
+               
         }
       
     }, [noticia])
@@ -53,8 +58,9 @@ export const Formulario = () => {
   
         
         const imagenInput = document.querySelector('#imagen');
-        const imagen = imagenInput.files[0];
     
+        const imagen = imagenInput.files[0];
+        
         const reader = new FileReader();
         reader.onloadend = () => {
           const base64Image = reader.result;
@@ -137,9 +143,10 @@ export const Formulario = () => {
                             onChange={e => setSelectValue( e.target.value)}
                             >
                                 <option value="" selected disabled>Seleccionar opción</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                                <option value="1">Noticia Destacada</option>
+                                <option value="2">Ultimas Noticias</option>
+                               
+                                
                             </select>
                         </div>
                 </div>
