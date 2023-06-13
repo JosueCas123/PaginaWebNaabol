@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { formatearFecha } from "../helpers/fechaFormateada";
 
 
 export const NoticiaVer = ({ultimaNoticia}) => {
@@ -29,7 +30,7 @@ export const NoticiaVer = ({ultimaNoticia}) => {
             <img src="../src/img/nn1.png" alt="" className="sm: w-full" />
           </div>
 
-          <div className="lx:w-5/12   ">
+          <div className=" xl:w-5/12    ">
             <h4 className="text-center font-bold text-2xl my-2 ">
               Últimas noticias
             </h4>
@@ -38,7 +39,7 @@ export const NoticiaVer = ({ultimaNoticia}) => {
               ultimaNoticia.map((noticia) => (
                 <div
                   key={noticia.id} // Agrega una clave única para cada noticia
-                  className="w-full my-5 p-2 flex flex-col items-center justify-center md:flex md:flex-col md:items-center lg:flex-row"
+                  className="w-full my-5 p-2 flex flex-col items-center shadow-md rounded-lg justify-center md:flex md:flex-col md:items-center lg:flex-row"
                 >
                   <img
                     src={noticia.imagen}
@@ -51,7 +52,7 @@ export const NoticiaVer = ({ultimaNoticia}) => {
                     </h5>
                     
                     <div className="w-full flex justify-between items-center">
-                      <p className="text-slate-400">{noticia.fecha}</p>
+                      <p className="text-slate-400">{formatearFecha(noticia.fecha)}</p>
                       <Link to={`/PageNoticia/${noticia.id}`}>
                         <button className="text-white bg-blue-700 p-2 text-sm rounded-lg">
                           Leer más...

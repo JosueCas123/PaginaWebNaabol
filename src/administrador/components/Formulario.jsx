@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import useUser from '../../hooks/useUser';
 import { Alerta } from '../../components/Alerta';
 import { HeaderAdmin } from './HeaderAdmin';
 import { Sibear } from './Sibear';
 import { CardInfo } from './CardInfo';
+import { Link, useNavigate } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 export const Formulario = () => {
 
@@ -11,11 +13,30 @@ export const Formulario = () => {
     const [descripcion, setDescripcion] = useState('');
     const [selectValue, setSelectValue] = useState('');
     const [alerta, setAlerta] = useState({})
-    
+    const navigate = useNavigate()
+    const {userInfo} = useAuth()
+
     const [id, setId] = useState(null)
     const {guardarNoticia, noticia} = useUser()
 
-    
+
+    const prioridad = useMemo(() => {
+        return (userInfo.name === 'Comunicacion')
+            ? <select 
+            class="border-2 border-gray-300 border-r p-2" 
+            value={selectValue}
+            onChange={e => setSelectValue( e.target.value)}
+            >
+                <option value="" selected disabled>Seleccionar opción</option>
+                <option value="1">Noticia Destacada</option>
+                <option value="2">Ultimas Noticias</option>
+               
+                
+            </select>
+            :<></>
+    },[userInfo])
+
+
 
     useEffect(() => {
 
@@ -137,17 +158,7 @@ export const Formulario = () => {
                     </div>
                         <div>
                             <label className='text-lg font-medium mr-3' htmlFor="">Priorida</label>
-                            <select 
-                            class="border-2 border-gray-300 border-r p-2" 
-                            value={selectValue}
-                            onChange={e => setSelectValue( e.target.value)}
-                            >
-                                <option value="" selected disabled>Seleccionar opción</option>
-                                <option value="1">Noticia Destacada</option>
-                                <option value="2">Ultimas Noticias</option>
-                               
-                                
-                            </select>
+                            {prioridad}
                         </div>
                 </div>
                 <div class="mb-4 flex flex-col">
@@ -163,11 +174,27 @@ export const Formulario = () => {
                     </textarea> 
                 </div>
 
-                <input 
-                    type='submit' 
-                    class="p-3 bg-blue-500 text-white cursor-pointer hover:bg-blue-400"
-                    value={id ? 'Guardar Cambios' : 'Agregar Noticia Nueva'}
-                />
+                <div className="flex flex-row justify-between">
+                    <div >
+                        <input 
+                            type='submit' 
+                            className="p-3 bg-blue-500 text-white cursor-pointer hover:bg-blue-400"
+                            value={id ? 'Guardar Cambios' : 'Agregar Noticia Nueva'}
+                        />
+                    </div>
+                    <div>
+                        <Link
+                            to='/Administrador'
+                        >
+                            <button
+                            
+                                className="p-3 bg-blue-500 text-white cursor-pointer hover:bg-blue-400"
+                            >
+                                Regresar atras
+                            </button>
+                        </Link>
+                    </div>
+                </div>
                 
 
         </form>

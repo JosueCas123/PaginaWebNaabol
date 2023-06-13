@@ -25,6 +25,12 @@ export const Noticias = () => {
   return (
     <>
         <Header/>
+
+        <div className="bg-news w-full h-80  bg-cover bg-center flex flex-col-reverse"> 
+          <div className=" w-10/12 mx-auto mb-16">
+            <h2 className=" text-white text-2xl font-semibold "> Noticias</h2>
+          </div>
+        </div>
         {/* */}
         <div className='w-auto md:w-11/12 mt-5 mx-auto'>
                 <h2 className="text-xl font-semibold">Noticias destacadas</h2>

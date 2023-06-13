@@ -93,14 +93,6 @@ export const AppModal = ()  => {
 
   return (
    
-      <Modal
-            isOpen={isOpen}
-            onRequestClose={onCloseModal}
-            style={customStyles}
-            className='modal w-full'
-            overlayClassName='modal-fondo'
-            closeTimeoutMS={200}
-      >
         <div>
           <h2>Nueva Noticia</h2>
           <form onSubmit={handleSubmit}>
@@ -165,7 +157,7 @@ export const AppModal = ()  => {
             msg && <Alerta alerta={alerta}/>
           }
         </div>
-      </Modal>
+      
   
   );
 }

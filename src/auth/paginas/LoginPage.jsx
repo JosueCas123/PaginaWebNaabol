@@ -55,7 +55,7 @@ export const LoginPage = () => {
                     const data = await response.json();
                     // Realizar alguna acción con los datos de respuesta
                      console.log(data);
-                        setAuth(data)
+                    setAuth(data)
                     localStorage.setItem('token', data.token)
                     navigate('/Administrador');
                 } else {

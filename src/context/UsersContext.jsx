@@ -6,6 +6,7 @@ export const UserContext = createContext()
 export const UsersProvider = ({children}) => {
 
     const {auth} = useAuth()
+    console.log(auth)
     const [noticias, setNoticias] = useState([])
     const [noticia, setNoticia] = useState({})
     const [dataNoticia, setDataNoticia] = useState([])
@@ -20,7 +21,7 @@ export const UsersProvider = ({children}) => {
 
           try {
 
-            const url = 'http://10.12.100.30:8000/api/noticias';
+            const url = 'http://10.12.100.30:8000/api/noticias_area';
             const token = localStorage.getItem('token');
 
              const response = await fetch(url, {

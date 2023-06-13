@@ -6,29 +6,35 @@ export const AuthProvider = ({children}) => {
 
     const [cargando, setCargando] = useState(true)
     const [auth, setAuth] = useState({})
-
+    const [userInfo, seUserInfo] = useState({})
+    console.log(auth)
+    console.log(userInfo)
     useEffect(() => {
         const mostrarCredenciales = async () => {
           const token = localStorage.getItem('token')
+          
           //console.log(token)
           if (!token){
               setCargando(false)
               return
           }
           try {
-              const response = await fetch(url,{
-                    
-                body: JSON.stringify({ usuario, contraseña }),
+            const token = localStorage.getItem('token')
+            const url = 'http://10.12.100.30:8000/api/user'
+            const response = await fetch(url, {
+                method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json'
-                }
+                  'Content-Type': 'application/json'
+                },
+  
               })
-              const data = await response.json()
-              setAuth(data)
+              const {data} = await response.json()
+              console.log(data)
+              seUserInfo(data)
           } catch (error) {
               console.log(error.response.data.msg)
-              setAuth({})
+              ({})
           }
   
           setCargando(false)
@@ -42,6 +48,8 @@ export const AuthProvider = ({children}) => {
         <AuthContext.Provider value={{
             auth,
             setAuth,
+            userInfo,
+            cargando
             
         }}>
             {children}
