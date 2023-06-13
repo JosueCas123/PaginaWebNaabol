@@ -6,7 +6,7 @@ export const Legal = () => {
   return (
     <>
       <Header />
-      <section className="w-full p-12 bg-legal bg-cover bg-center ">
+      <section className="w-full p-12 bg-legal bg-cover bg-center  ">
         <div className="w-11/12 mx-auto max-w-screen-2xl text-white text-3xl text-center font-bold my-6 lg:text-left lg:text-4xl">
           <h2>Leyes y Normas</h2>
         </div>
@@ -18,7 +18,7 @@ export const Legal = () => {
           </h3>
         </div>
 
-        <div className="my-4">
+        <div className="my-4  overflow-x-auto">
           <table className=" w-11/12 mx-auto max-w-screen-2xl   ">
             <thead className="bg-blue-900 text-white">
               <tr>
@@ -57,7 +57,7 @@ export const Legal = () => {
           </h3>
         </div>
 
-        <div className="my-4">
+        <div className="my-4 overflow-x-auto">
           <table className=" w-11/12 mx-auto max-w-screen-2xl   ">
             <thead className="bg-blue-900 text-white">
               <tr>

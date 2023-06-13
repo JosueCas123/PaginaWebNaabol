@@ -13,6 +13,7 @@ module.exports = {
         Login: "url('./src/img/LoginImg.jpg')",
         Admi: "url('./src/img/administratico.jpg')",
         legal: "url('./src/img/legal.jpg')",
+        Transparencia: "url('src/img/transparencia.jpg')",
       },
       backgroundColor: (theme) => ({
         ...theme("colors"),

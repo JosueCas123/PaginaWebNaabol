@@ -20,7 +20,7 @@ export const HomeNaabol = () => {
           <div className=" w-10/12 h-full  mx-auto flex flex-col justify-evenly py-10 mb-40 mt-40">
             <div className=" flex  text-white  flex-col sm:flex-row sm:justify-between  sm:items-center  ">
               <div className=" ">
-                <p className="my-3 text-2xl sm:text-3xl  lg:text-4xl">
+                <p className="my-3 text-2xl  sm:text-3xl  lg:text-4xl ">
                   Bienvenidos a
                 </p>
                 <h1 className=" font-bold text-xl sm:text-2xl lg:text-3xl  ">
@@ -38,102 +38,195 @@ export const HomeNaabol = () => {
 
             <div className="flex  flex-wrap  text-white  items-center flex-col ">
               <div className="flex justify-center flex-wrap  text-white  items-center sm:my-6 lg:my-8 ">
-                <Link to="/Administrativa">
+                <Link to="">
                   <a
                     href=""
-                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                    className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
                   >
                     <div className=" ">
-                      <i className="rounded-full  text-4xl p-1 border-4 border-blue-900 bx bx-world bg-black sm:text-6xl lg:text-6xl"></i>
+                      <i className=" text-2xl p-1   bx bx-world  sm:text-4xl lg:text-6xl"></i>
                     </div>
-                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                      <p className="text-xs sm:text-sm">AERONÁUTICA</p>
-                    </div>
-                  </a>
-                </Link>
-                <Link to="/Administrativo">
-                  <a
-                    href=""
-                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                  >
-                    <div className="">
-                      <i className="rounded-full  text-4xl p-1 border-4 border-blue-900 bx bx-building-house  bg-black sm:text-6xl lg:text-6xl"></i>
-                    </div>
-                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                      <p className="text-xs sm:text-sm">ADMINISTRATIVA</p>
+                    <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
+                      <p
+                        className="text-xs sm:text-sm lg:text-base
+                      "
+                      >
+                        AERONÁUTICA
+                      </p>
+                      <p className="text-cyan-400 text-center lg:text-sm">
+                        Ver mas <i className="   bx bx-chevron-right"></i>
+                      </p>
                     </div>
                   </a>
                 </Link>
 
-                <Link to="/Legal">
+                <Link to="/Administrativa">
                   <a
                     href=""
-                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                    className="w-36  bg-black  rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
                   >
-                    <div className="">
-                      <i className="bx bx-file rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
+                    <div className=" ">
+                      <i className=" text-2xl p-1    bx bx-building-house  sm:text-4xl lg:text-6xl"></i>
                     </div>
-                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                      <p className="text-xs sm:text-sm">LEGAL</p>
+                    <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
+                      <p
+                        className="text-xs sm:text-sm lg:text-base
+                      "
+                      >
+                        ADMINISTRATIVA
+                      </p>
+                      <p className="text-cyan-400 text-center lg:text-sm">
+                        Ver mas <i className="   bx bx-chevron-right"></i>
+                      </p>
                     </div>
                   </a>
                 </Link>
-                <a
-                  href=""
-                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                >
-                  <div className="">
-                    <i class="bx bx-file-find rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
-                  </div>
-                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                    <p className="text-xs sm:text-sm">TRANSPARENCIA</p>
-                  </div>
-                </a>
-                <a
-                  href=""
-                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                >
-                  <div className="">
-                    <i class="bx bxs-plane-alt rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
-                  </div>
-                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
-                  </div>
-                </a>
-                <a
-                  href=""
-                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
-                >
-                  <div className="">
-                    <i class="bx bx-id-card rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
-                  </div>
-                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                    <p className="text-xs sm:text-sm">CREDENCIALES</p>
-                  </div>
-                </a>
-                <Link to="/Aeropuerto">
+                <Link to="/Legal">
                   <a
-                    to="/Pasajeros"
-                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                    href=""
+                    className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
                   >
-                    <div className="">
-                      <i class="bx bx-map-alt rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
+                    <div className=" ">
+                      <i className=" text-2xl p-1   bx bx-file  sm:text-4xl lg:text-6xl"></i>
                     </div>
-                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                      <p className="text-xs sm:text-sm">PLANIFICA TU VIAJE</p>
+                    <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
+                      <p
+                        className="text-xs text-center sm:text-sm lg:text-base
+                      "
+                      >
+                        LEGAL
+                      </p>
+                      <p className="text-cyan-400 text-center lg:text-sm">
+                        Ver mas <i className="   bx bx-chevron-right"></i>
+                      </p>
+                    </div>
+                  </a>
+                </Link>
+
+                <Link to="/Transparencias">
+                  <a
+                    href=""
+                    className="w-36  bg-black  rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
+                  >
+                    <div className=" ">
+                      <i className=" text-2xl p-1   bx bx-file-find  sm:text-4xl lg:text-6xl"></i>
+                    </div>
+                    <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
+                      <p
+                        className="text-xs sm:text-sm lg:text-base
+                      "
+                      >
+                        TRANSPARENCIA
+                      </p>
+                      <p className="text-cyan-400 text-center lg:text-sm">
+                        Ver mas <i className="   bx bx-chevron-right"></i>
+                      </p>
+                    </div>
+                  </a>
+                </Link>
+
+                <Link to="">
+                  <a
+                    href=""
+                    className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
+                  >
+                    <div className=" ">
+                      <i className=" text-2xl p-1   bx bxs-plane-alt sm:text-4xl lg:text-6xl"></i>
+                    </div>
+                    <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
+                      <p
+                        className="text-xs sm:text-sm lg:text-base
+                      "
+                      >
+                        AERONÁUTICA
+                      </p>
+                      <p className="text-cyan-400 text-center lg:text-sm">
+                        Ver mas <i className="   bx bx-chevron-right"></i>
+                      </p>
                     </div>
                   </a>
                 </Link>
                 <Link to="">
                   <a
                     href=""
-                    className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                    className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
                   >
-                    <div className="">
-                      <i class="bx bx-user-voice rounded-full  text-4xl p-1 border-4 border-blue-900  bg-black sm:text-6xl lg:text-6xl"></i>
+                    <div className=" ">
+                      <i className=" text-2xl p-1   bx bx-id-card  sm:text-4xl lg:text-6xl"></i>
                     </div>
-                    <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
-                      <p className="text-xs sm:text-sm">INFO PASAJEROS</p>
+                    <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
+                      <p
+                        className="text-xs sm:text-sm lg:text-base
+                      "
+                      >
+                        CREDENCIALES
+                      </p>
+                      <p className="text-cyan-400 text-center lg:text-sm">
+                        Ver mas <i className="   bx bx-chevron-right"></i>
+                      </p>
+                    </div>
+                  </a>
+                </Link>
+                <Link to="">
+                  <a
+                    href=""
+                    className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
+                  >
+                    <div className=" ">
+                      <i className=" text-2xl p-1  bx bx-map-alt   sm:text-4xl lg:text-6xl"></i>
+                    </div>
+                    <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
+                      <p
+                        className="text-xs sm:text-sm lg:text-base
+                      "
+                      >
+                        PLANIFICA TU VIAJE
+                      </p>
+                      <p className="text-cyan-400 text-center lg:text-sm">
+                        Ver mas <i className="   bx bx-chevron-right"></i>
+                      </p>
+                    </div>
+                  </a>
+                </Link>
+                <Link to="/Aeropuerto">
+                  <a
+                    href=""
+                    className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
+                  >
+                    <div className=" ">
+                      <i className=" text-2xl p-1  bx bx-user-voice sm:text-4xl lg:text-6xl"></i>
+                    </div>
+                    <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
+                      <p
+                        className="text-xs sm:text-sm lg:text-base
+                      "
+                      >
+                        INFO PASAJEROS
+                      </p>
+                      <p className="text-cyan-400 text-center lg:text-sm">
+                        Ver mas <i className="   bx bx-chevron-right"></i>
+                      </p>
+                    </div>
+                  </a>
+                </Link>
+                <Link to="/Facturacion">
+                  <a
+                    href=""
+                    className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
+                  >
+                    <div className=" ">
+                      <i className=" text-2xl p-1  bx bx-user-voice sm:text-4xl lg:text-6xl"></i>
+                    </div>
+                    <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
+                      <p
+                        className="text-xs sm:text-sm lg:text-base
+                      "
+                      >
+                        FACTURACION
+                      </p>
+                      <p className="text-cyan-400 text-center lg:text-sm">
+                        Ver mas <i className="   bx bx-chevron-right"></i>
+                      </p>
                     </div>
                   </a>
                 </Link>
@@ -158,7 +251,7 @@ export const HomeNaabol = () => {
           </Link>
         </div>
 
-        <section className="lg:w-11/12 lg:mx-auto">
+        <section className="lg:w-11/12 lg:mx-auto max-w-screen-2xl">
           <CardGerencia />
           <div>
             <button>Ver mas..</button>
@@ -185,8 +278,7 @@ export const HomeNaabol = () => {
               </div>
               <div className="flex items-center justify-center my-5">
                 <iframe
-                  width="350"
-                  height="250"
+                  className="w-96 h-72"
                   src="https://www.youtube.com/embed/Z2XE8DJuoZA"
                   title="YouTube video player"
                   frameborder="0"

@@ -11,6 +11,8 @@ import { NotiaPage } from "../paginas/NotiaPage";
 import { Formulario } from "../administrador/components/Formulario";
 import { Administrativo } from "../paginas/Administrativo";
 import { Legal } from "../paginas/Legal";
+import { Transparencias } from "../paginas/Transparencias";
+import { Facturacion } from "../paginas/Facturacion";
 
 export const AppRouter = () => {
   return (
@@ -27,6 +29,9 @@ export const AppRouter = () => {
         <Route path="/Administrativo" element={<Administrativo />} />
         <Route path="//Pasajeros" element={<Administrativo />} />
         <Route path="/Legal" element={<Legal />} />
+        <Route path="/Transparencias" element={<Transparencias />} />
+        <Route path="/Facturacion" element={<Facturacion />} />
+
         <Route path="/" element={<Navigate to="/HomeNaabol" />} />
         <Route path="/Aeropuerto" element={<Aeropuerto />} />
       </Routes>
