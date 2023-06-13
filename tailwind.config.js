@@ -14,6 +14,7 @@ module.exports = {
         Admi: "url('./src/img/administratico.jpg')",
         legal: "url('./src/img/legal.jpg')",
         Transparencia: "url('src/img/transparencia.jpg')",
+        Facturacion: "url('src/img/Facturacion.jpg')",
       },
       backgroundColor: (theme) => ({
         ...theme("colors"),

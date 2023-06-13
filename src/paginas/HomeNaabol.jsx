@@ -215,7 +215,7 @@ export const HomeNaabol = () => {
                     className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
                   >
                     <div className=" ">
-                      <i className=" text-2xl p-1  bx bx-user-voice sm:text-4xl lg:text-6xl"></i>
+                      <i className=" text-2xl p-1  bx bxs-user-detail sm:text-4xl lg:text-6xl"></i>
                     </div>
                     <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
                       <p
@@ -290,6 +290,7 @@ export const HomeNaabol = () => {
           </section>
         </section>
       </section>
+
       <Foot />
     </>
   );
