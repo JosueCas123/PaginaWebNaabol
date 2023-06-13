@@ -13,7 +13,6 @@ export const Formulario = () => {
     const [descripcion, setDescripcion] = useState('');
     const [selectValue, setSelectValue] = useState('');
     const [alerta, setAlerta] = useState({})
-    const navigate = useNavigate()
     const {userInfo} = useAuth()
 
     const [id, setId] = useState(null)
