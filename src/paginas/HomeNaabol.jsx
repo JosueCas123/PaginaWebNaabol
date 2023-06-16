@@ -16,7 +16,10 @@ export const HomeNaabol = () => {
     <>
       <Header />
       <section className="w-full  ">
-        <div className="w-full flex flex-col- justify-evenly h-full bg-HomeImg bg-cover object-cover bg-center  lg:bg-cover lg:bg-center lg:bg-no-repet ">
+        <div
+          className="w-full flex flex-col justify-evenly h-full bg-HomeImg
+           bg-cover object-cover bg-center  lg:bg-cover lg:bg-center lg:bg-no-repet "
+        >
           <div className=" w-10/12 h-full  mx-auto flex flex-col justify-evenly py-10 mb-40 mt-40">
             <div className=" flex  text-white  flex-col sm:flex-row sm:justify-between  sm:items-center  ">
               <div className=" ">
@@ -125,7 +128,7 @@ export const HomeNaabol = () => {
                   </a>
                 </Link>
 
-                <Link to="">
+                <Link to="/Navegacion">
                   <a
                     href=""
                     className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
@@ -138,7 +141,7 @@ export const HomeNaabol = () => {
                         className="text-xs sm:text-sm lg:text-base
                       "
                       >
-                        AERONÁUTICA
+                        NAVEGACION
                       </p>
                       <p className="text-cyan-400 text-center lg:text-sm">
                         Ver mas <i className="   bx bx-chevron-right"></i>
@@ -167,20 +170,20 @@ export const HomeNaabol = () => {
                     </div>
                   </a>
                 </Link>
-                <Link to="">
+                <Link to="/Maleta">
                   <a
                     href=""
                     className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
                   >
                     <div className=" ">
-                      <i className=" text-2xl p-1  bx bx-map-alt   sm:text-4xl lg:text-6xl"></i>
+                      <i className=" text-2xl p-1  bx bx-briefcase-alt-2  sm:text-4xl lg:text-6xl"></i>
                     </div>
                     <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
                       <p
-                        className="text-xs sm:text-sm lg:text-base
+                        className="text-xs sm:text-sm lg:text-base text-center
                       "
                       >
-                        PLANIFICA TU VIAJE
+                        MALETAS
                       </p>
                       <p className="text-cyan-400 text-center lg:text-sm">
                         Ver mas <i className="   bx bx-chevron-right"></i>

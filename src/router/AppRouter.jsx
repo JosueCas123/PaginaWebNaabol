@@ -13,6 +13,8 @@ import { Administrativo } from "../paginas/Administrativo";
 import { Legal } from "../paginas/Legal";
 import { Transparencias } from "../paginas/Transparencias";
 import { Facturacion } from "../paginas/Facturacion";
+import { Navegacion } from "../paginas/Navegacion";
+import { Maleta } from "../paginas/Maleta";
 
 export const AppRouter = () => {
   return (
@@ -29,8 +31,11 @@ export const AppRouter = () => {
         <Route path="/Administrativo" element={<Administrativo />} />
         <Route path="//Pasajeros" element={<Administrativo />} />
         <Route path="/Legal" element={<Legal />} />
+        <Route path="/Maleta" element={<Maleta />} />
+
         <Route path="/Transparencias" element={<Transparencias />} />
         <Route path="/Facturacion" element={<Facturacion />} />
+        <Route path="/Navegacion" element={<Navegacion />} />
 
         <Route path="/" element={<Navigate to="/HomeNaabol" />} />
         <Route path="/Aeropuerto" element={<Aeropuerto />} />

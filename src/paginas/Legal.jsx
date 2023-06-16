@@ -19,7 +19,7 @@ export const Legal = () => {
         </div>
 
         <div className="my-4  overflow-x-auto">
-          <table className=" w-11/12 mx-auto max-w-screen-2xl   ">
+          <table className=" w-11/12  mx-auto max-w-screen-2xl   ">
             <thead className="bg-blue-900 text-white">
               <tr>
                 <th>Título</th>
