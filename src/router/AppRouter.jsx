@@ -13,6 +13,8 @@ import { Administrativo } from "../paginas/Administrativo";
 
 import { Transparencias } from "../paginas/Transparencias";
 import { Facturacion } from "../paginas/Facturacion";
+import { Navegacion } from "../paginas/Navegacion";
+import { Maleta } from "../paginas/Maleta";
 
 import { HomeCominicacion } from "../administrador/components/comunicacion/HomeCominicacion";
 import { HomeLegal } from "../administrador/components/legal/HomeLegal.jsx";
@@ -41,8 +43,12 @@ export const AppRouter = () => {
         <Route path="/Aeropuerto" element={<Aeropuerto />} />
         <Route path="/Administrativo" element={<Administrativo />} />
         <Route path="//Pasajeros" element={<Administrativo />} />
+        <Route path="/Legal" element={<Legal />} />
+        <Route path="/Maleta" element={<Maleta />} />
+
         <Route path="/Transparencias" element={<Transparencias />} />
         <Route path="/Facturacion" element={<Facturacion />} />
+        <Route path="/Navegacion" element={<Navegacion />} />
 
         <Route path="/" element={<Navigate to="/HomeNaabol" />} />
         <Route path="/Aeropuerto" element={<Aeropuerto />} />

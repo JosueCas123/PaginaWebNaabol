@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <UsersProvider>
         <LegalAdimnProvider>
           <RecursoProvider>
-            <AppNaabol />
+            <AppNaabol/>
           </RecursoProvider>
         </LegalAdimnProvider>
         </UsersProvider>

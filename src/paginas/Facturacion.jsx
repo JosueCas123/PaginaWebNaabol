@@ -7,7 +7,7 @@ export const Facturacion = () => {
     <>
       <Header />
       <section className=" bg-Facturacion w-full py-5 bg-cover bg-center bg-no-repeat flex justify-center items-center sm:py-36 ">
-        <div className="w-11/12 max-w-screen-2xl p-4 bg-gray-900 bg-opacity-50 lg:w-3/5">
+        <div className="w-11/12 max-w-screen-2xl p-4 bg-gray-900 bg-opacity-50 rounded-3xl lg:w-3/5">
           <div className="text-white text-3xl text-center font-bold  m-2">
             <h2>FACTURACION POR CICLOS WEB</h2>
           </div>
