@@ -1,10 +1,10 @@
-import { createContext, useEffect, useState } from "react"
-import useAuth from "../hooks/useAuth"
+import React, { useEffect, useState } from 'react'
+import { createContext } from 'react'
+import useAuth from '../hooks/useAuth'
+ 
+export const LegalAdimnContext = createContext()
 
-export const UserContext = createContext()
-
-export const UsersProvider = ({children}) => {
-
+export const LegalAdimnProvider = ({children}) => {
     const {auth} = useAuth()
     console.log(auth)
     const [noticias, setNoticias] = useState([])
@@ -54,7 +54,7 @@ export const UsersProvider = ({children}) => {
 
           try {
 
-            const url = 'http://10.12.100.30:8000/api/noticias';
+            const url = 'http://10.12.100.30:8000/api/legal';
           
              const response = await fetch(url, {
               method: 'GET',
@@ -219,10 +219,8 @@ export const UsersProvider = ({children}) => {
      }
 
 
-
-
-    return(
-        <UserContext.Provider value={{
+  return (
+    <LegalAdimnContext.Provider value={{
             noticias,
             setNoticias,
             guardarNoticia,
@@ -230,11 +228,8 @@ export const UsersProvider = ({children}) => {
             setEdicion,
             dataNoticia,
             noticia,
-            
-        }}>
-
+    }}>
             {children}
-
-        </UserContext.Provider>
-    )
+    </LegalAdimnContext.Provider>
+  )
 }

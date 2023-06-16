@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-import { Table } from './components/Table';
-import { Sibear } from './components/Sibear';
-import { HeaderAdmin } from './components/HeaderAdmin';
+
 import { Link } from 'react-router-dom';
+import { Sibear } from './components/Sibear';
+import { HeaderAdmin } from './components/comunicacion/HeaderAdmin';
+import { Comunicado } from './components/Comunicado';
 
 
 
@@ -118,7 +119,7 @@ export const Administrador = () => {
             </div>
         </div>
         
-        <Table/>
+        <Comunicado/>
     </div>
 
     </>

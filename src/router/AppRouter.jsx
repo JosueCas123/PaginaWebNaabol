@@ -8,12 +8,16 @@ import { SobreNosotros } from "../paginas/SobreNosotros";
 import { Administrador } from "../administrador/Administrador";
 import { Aeropuerto } from "../paginas/Aeropuerto";
 import { NotiaPage } from "../paginas/NotiaPage";
-import { Formulario } from "../administrador/components/Formulario";
+import { Formulario } from "../administrador/components/comunicacion/Formulario";
 import { Administrativo } from "../paginas/Administrativo";
-import { Legal } from "../paginas/Legal";
+
 import { Transparencias } from "../paginas/Transparencias";
 import { Facturacion } from "../paginas/Facturacion";
-import { RecurosoHumanos } from "../administrador/components/RecurosoHumanos";
+
+import { HomeCominicacion } from "../administrador/components/comunicacion/HomeCominicacion";
+import { HomeLegal } from "../administrador/components/legal/HomeLegal.jsx";
+import { Legal } from "../paginas/Legal";
+import { HomeRecursosHumanos } from "../administrador/components/RecursosHumanos/HomeRecursosHumanos";
 
 export const AppRouter = () => {
   return (
@@ -26,14 +30,17 @@ export const AppRouter = () => {
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/Administrador" element={<Administrador />} />
         <Route path="/Administrativa" element={<Administrativo />} />
+        <Route path="/Legal" element={<Legal/>} />
       
         <Route path="/Formulario" element={<Formulario/>} />
-        <Route path="/RRHH" element={<RecurosoHumanos/>} />
+        <Route path="/Comunicacion" element={<HomeCominicacion/>} />
+        <Route path="/LegalAdmin" element={<HomeLegal/>} />
+        <Route path="RRHH" element={<HomeRecursosHumanos/>} />
+
 
         <Route path="/Aeropuerto" element={<Aeropuerto />} />
         <Route path="/Administrativo" element={<Administrativo />} />
         <Route path="//Pasajeros" element={<Administrativo />} />
-        <Route path="/Legal" element={<Legal />} />
         <Route path="/Transparencias" element={<Transparencias />} />
         <Route path="/Facturacion" element={<Facturacion />} />
 

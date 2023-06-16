@@ -12,7 +12,7 @@ import { RedesSociales } from "../components/RedesSociales";
 import { ClimaHora } from "../components/ClimaHora";
 
 export const HomeNaabol = () => {
-  const {noticias} =useUser()
+  const {dataNoticia} =useUser()
   return (
     <>
       <Header />
@@ -262,7 +262,7 @@ export const HomeNaabol = () => {
                 <h2 className="text-xl font-semibold">Noticias destacadas</h2>
             <div className=" w-auto h-80 items-center my-10 overflow-x-auto overscroll-x-contain  space-x-6  flex justify-center md:flex md:space-x-5 box-border mx-auto hidden:space-y-5 overflow-hidden" id='Noticias_descatadas'>
             {
-                        noticias.map(noticia  => (
+                        dataNoticia.map(noticia  => (
                             <NoticiaDestacada
                               key={noticia.id}
                               noticia={noticia}

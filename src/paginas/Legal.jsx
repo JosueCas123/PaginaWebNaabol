@@ -1,8 +1,16 @@
 import React from "react";
 import { Header } from "../components/Header";
 import { Foot } from "../components/Foot";
+import useLegal from "../hooks/useLegal";
+import { Document, Page } from 'react-pdf';
+import { formatearFecha } from "../helpers/fechaFormateada";
 
 export const Legal = () => {
+
+  const {dataNoticia} = useLegal()
+  //console.log(dataNoticia[0].imagen)
+
+  
   return (
     <>
       <Header />
@@ -24,29 +32,43 @@ export const Legal = () => {
               <tr>
                 <th>Título</th>
                 <th>Publicación</th>
+               
                 <th>Descargar</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="">
-                <td className="py-2  flex items-center">
-                  <i className="text-3xl text-red-700 mx-2 bx bxs-file-pdf"></i>
-                  Constitucion Politica del Estado
-                </td>
-                <td className="text-center">26-11-2022</td>
-                <td className=" flex items-center justify-center">
-                  <a
-                    className=" bg-green-600 rounded-3xl px-2 text-white"
-                    href="../img/fondo1.jpg"
-                    download=""
-                  >
-                    <button className="flex items-center">
-                      <i className="text-2xl  mx-1  bx bxs-cloud-download"></i>
-                      Descargar
-                    </button>
-                  </a>
-                </td>
-              </tr>
+              {
+                dataNoticia.map(legal => {
+                  console.log(legal.imagen)
+                  return(
+
+                  <tr key={legal.id} className="">
+                    <td className="py-2  flex items-center">
+                      <i className="text-3xl text-red-700 mx-2 bx bxs-file-pdf"></i>
+                      {legal.titulo}
+                    </td>
+                    <td className="text-center">{formatearFecha(legal.fecha)}</td>
+                    <td className=" flex items-center justify-center">
+                    <object
+                        data={legal.imagen}
+                        type="application/pdf"
+                        width="80%"
+                        height="300px"
+                     >
+                         <p>
+                           No se puede mostrar el PDF.{" "}
+                           <a href={legal.imagen} target="_blank" rel="noopener noreferrer">
+                             Haz clic aquí para descargarlo.
+                           </a>
+                         </p>
+                      </object>
+      
+                    </td>
+                  </tr>
+                  )
+
+                })
+              }
             </tbody>
           </table>
         </div>

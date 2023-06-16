@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useMemo } from 'react'
-import useUser from '../../hooks/useUser';
-import { Alerta } from '../../components/Alerta';
-import { HeaderAdmin } from './HeaderAdmin';
-import { Sibear } from './Sibear';
+import useUser from '../../../hooks/useUser';
+import { Alerta } from '../../../components/Alerta';
+
+
 import { CardInfo } from './CardInfo';
 import { Link, useNavigate } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
+import useAuth from '../../../hooks/useAuth';
+import { HeaderAdmin } from './HeaderAdmin';
+import { Sibear } from './Sibear';
+import useLegal from '../../../hooks/useLegal';
 
 export const Formulario = () => {
 
@@ -16,7 +19,7 @@ export const Formulario = () => {
     const {userInfo} = useAuth()
 
     const [id, setId] = useState(null)
-    const {guardarNoticia, noticia} = useUser()
+    const {guardarNoticia, noticia} = useLegal()
 
 
     const prioridad = useMemo(() => {

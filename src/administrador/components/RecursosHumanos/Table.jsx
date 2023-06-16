@@ -1,16 +1,20 @@
 import React from 'react'
-import useUser from '../../hooks/useUser'
+import useUser from '../../../hooks/useUser'
 import { ContendoTable } from './ContendoTable'
+import useRecHumanos from '../../../hooks/useRecHumanos'
+
+
+
 
 export const Table = () => {
 
-    const {noticias} = useUser()
+    const {noticias} = useRecHumanos()
     console.log(noticias)
 
   return (
 
     <>
-    <div style={{ overflowX: 'auto' }}>
+    <div style={{ overflowX: 'auto' }} className='w-full'>
 
         <table  className="w-full scroll-x-1">
                 <thead>

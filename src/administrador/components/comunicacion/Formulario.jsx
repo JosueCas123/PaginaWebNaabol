@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import { HeaderAdmin } from './HeaderAdmin'
-import {Link} from 'react-router-dom'
-import { Sibear } from './Sibear'
-import { CardInfo } from './CardInfo'
-import useUser from '../../hooks/useUser'
-import useAuth from '../../hooks/useAuth'
-import { Alerta } from '../../components/Alerta'
+import React, { useState, useEffect, useMemo } from 'react'
+import useUser from '../../../hooks/useUser';
+import { Alerta } from '../../../components/Alerta';
 
-export const RecurosoHumanos = () => {
-    
-    const [nombre, setNombre] = useState('');
-    const [cargo, setCargo] = useState('');
+
+import { CardInfo } from './CardInfo';
+import { Link, useNavigate } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
+import { HeaderAdmin } from './HeaderAdmin';
+import { Sibear } from '../Sibear';
+
+export const Formulario = () => {
+
+    const [titulo, setTitulo] = useState('');
+    const [descripcion, setDescripcion] = useState('');
     const [selectValue, setSelectValue] = useState('');
     const [alerta, setAlerta] = useState({})
     const {userInfo} = useAuth()
@@ -19,7 +21,21 @@ export const RecurosoHumanos = () => {
     const {guardarNoticia, noticia} = useUser()
 
 
-    
+    const prioridad = useMemo(() => {
+        return (userInfo.name === 'Comunicacion')
+            ? <select 
+            class="border-2 border-gray-300 border-r p-2" 
+            value={selectValue}
+            onChange={e => setSelectValue( e.target.value)}
+            >
+                <option value="" selected disabled>Seleccionar opción</option>
+                <option value="1">Noticia Destacada</option>
+                <option value="2">Ultimas Noticias</option>
+               
+                
+            </select>
+            :<></>
+    },[userInfo])
 
 
 
@@ -72,10 +88,10 @@ export const RecurosoHumanos = () => {
           const base64Image = reader.result;
     
           const info = {
-            nombre: nombre,
-            cargo: cargo,
+            titulo: titulo,
+            descripcion: descripcion,
             imagen: base64Image,
-            
+            prioridad: selectValue
           };
           console.log(info)
          // console.log(base64)
@@ -101,12 +117,11 @@ export const RecurosoHumanos = () => {
         setSelectValue('')
         imagenInput.value = ''
       }
-      
-      const {msg} = alerta
 
+      const {msg} = alerta
   return (
+
     <>
-        <>
         {/**componente header  */}
         <HeaderAdmin/>
          {/**componente Sibear  */}
@@ -115,18 +130,18 @@ export const RecurosoHumanos = () => {
 
          <CardInfo/>
         <div style={{ overflowX: 'auto' }} className='w-3/5 shadow-lgflex flex-col justify-center items-center content  transform ease-in-out duration-500 ml-20 p-5 xl:ml-72 xl:mt-20  shadow-xl  lx:p-16'>
-        <h2 className=" font-extrabold xl:text-xl  ">Per</h2>
+        <h2 className=" font-extrabold xl:text-xl  ">Nueva Noticia</h2>
 
         <form onSubmit={handleSubmit}>
                 <div class="mb-4">
-                    <label class="text-xl  font-medium mt-10">Nombre<span class="text-red-500">*</span></label>
+                    <label class="text-xl  font-medium mt-10">Titulo<span class="text-red-500">*</span></label>
                     <input 
                         type="text" 
                         class="border-2 border-gray-300 p-2 w-full " 
                         placeholder='Ingrese un titulo'
-                        name="nombre" 
-                        value={nombre}
-                        onChange={e => setNombre( e.target.value)}
+                        name="titulo" 
+                        value={titulo}
+                        onChange={e => setTitulo( e.target.value)}
                         id="title" 
                         
                     />
@@ -143,33 +158,21 @@ export const RecurosoHumanos = () => {
                             />
                     </div>
                         <div>
-                            <label className='text-lg font-medium mr-3' htmlFor=""></label>
-                            <select 
-                                 class="border-2 border-gray-300 border-r p-2" 
-                                 value={selectValue}
-                                 onChange={e => setSelectValue( e.target.value)}
-                                 >
-                                     <option value="" selected disabled>Seleccionar opción</option>
-                                     <option value="1">La Paz</option>
-                                     <option value="2"></option>
-
-
-                              </select>
+                            <label className='text-lg font-medium mr-3' htmlFor="">Priorida</label>
+                            {prioridad}
                         </div>
                 </div>
                 <div class="mb-4 flex flex-col">
-                    <label class="text-lg font-medium mr-3">Cargo</label>
-                    <input 
-                        type="text" 
-                        class="border-2 border-gray-300 p-2 w-full " 
-                        placeholder='Ingrese un titulo'
-                        name="cargo" 
-                        value={cargo}
-                        onChange={e => setCargo( e.target.value)}
-                        id="title" 
-                        
-                    />
+                    <label class="text-lg font-medium mr-3">Description</label>
+                    <textarea 
+                        name="content" 
+                        class="border-2 border-gray-500"
+                        placeholder='Ingrese una descripcion'
+                        value={descripcion}
+                        onChange={e => setDescripcion( e.target.value)}
+                    >
 
+                    </textarea> 
                 </div>
 
                 <div className="flex flex-row justify-between">
@@ -201,8 +204,5 @@ export const RecurosoHumanos = () => {
         }
     </div>
     </>
-    
-    </>
-
   )
 }

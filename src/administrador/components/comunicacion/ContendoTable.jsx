@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
-import useUser from '../../hooks/useUser'
+import useUser from '../../../hooks/useUser'
 import { Link } from 'react-router-dom'
-import { formatearFecha } from '../../helpers/fechaFormateada'
+import { formatearFecha } from '../../../helpers/fechaFormateada'
 
 export const ContendoTable = ({noticia}) => {
 

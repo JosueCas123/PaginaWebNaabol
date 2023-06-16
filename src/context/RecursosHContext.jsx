@@ -1,9 +1,9 @@
-import { createContext, useEffect, useState } from "react"
-import useAuth from "../hooks/useAuth"
+import React, { createContext, useEffect, useState } from 'react'
+import useAuth from '../hooks/useAuth'
 
-export const UserContext = createContext()
+export const RecursosHContext = createContext()
 
-export const UsersProvider = ({children}) => {
+export const RecursoProvider = ({children}) => {
 
     const {auth} = useAuth()
     console.log(auth)
@@ -219,11 +219,9 @@ export const UsersProvider = ({children}) => {
      }
 
 
-
-
-    return(
-        <UserContext.Provider value={{
-            noticias,
+  return (
+    <RecursosHContext.Provider value={{
+        noticias,
             setNoticias,
             guardarNoticia,
             eliminarNoticia,
@@ -231,10 +229,8 @@ export const UsersProvider = ({children}) => {
             dataNoticia,
             noticia,
             
-        }}>
-
-            {children}
-
-        </UserContext.Provider>
-    )
+    }}>
+        {children}
+    </RecursosHContext.Provider>
+  )
 }
