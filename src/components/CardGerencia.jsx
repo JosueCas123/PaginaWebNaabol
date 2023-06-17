@@ -11,7 +11,7 @@ export const CardGerencia = () => {
           </div>
           <div className="flex flex-col items-center">
             <p className="font-semibold text-xl">Director Ejecutivo</p>
-            <p className="items-center">Elmer Pozo Olivera</p>
+            <p className="items-center">Elmer Pozo Oliva</p>
           </div>
         </div>
         <div className="Card_Naabol flex justify-center items-center">
@@ -20,7 +20,7 @@ export const CardGerencia = () => {
           </div>
           <div className="flex flex-col items-center">
             <p className="font-semibold text-xl">Director Ejecutivo</p>
-            <p className="items-center">Elmer Pozo Olivera</p>
+            <p className="items-center">Elmer Pozo Oliva</p>
           </div>
         </div>
         <div className="Card_Naabol flex justify-center items-center">
@@ -29,7 +29,7 @@ export const CardGerencia = () => {
           </div>
           <div className="flex flex-col items-center">
             <p className="font-semibold text-xl">Director Ejecutivo</p>
-            <p className="items-center">Elmer Pozo Olivera</p>
+            <p className="items-center">Elmer Pozo Oliva</p>
           </div>
         </div>
       </div>

@@ -234,6 +234,114 @@ export const HomeNaabol = () => {
                     </div>
                   </a>
                 </Link>
+                <a
+                  href=""
+                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon2.png"
+                      alt=""
+                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                    <p className="text-xs sm:text-sm">ADMINISTRATIVA</p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon3.png"
+                      alt=""
+                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                    <p className="text-xs sm:text-sm">LEGAL </p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon4.png"
+                      alt=""
+                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                    <p className="text-xs sm:text-sm">TRANSPARENCIA</p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon5.png"
+                      alt=""
+                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon6.png"
+                      alt=""
+                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
+                  </div>
+                </a>
+                <a
+                  to="/Pasajeros"
+                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon7.png"
+                      alt=""
+                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
+                  </div>
+                </a>
+                <a
+                  href=""
+                  className="  w-28 h-24 flex flex-col items-center justify-between m-3 sm:w-32 sm:h-32 sm:justify-around lg:w-40 lg:h-40"
+                >
+                  <div className="">
+                    <img
+                      src="../src/img/icon8.png"
+                      alt=""
+                      className="w-14 rounded-full p-1 border-4  border-blue-900 bg-black sm:w-20 lg:w-20"
+                    />
+                  </div>
+                  <div className="bg-blue-950 w-24 text-center rounded-xl  font-bold p-1 sm:p-2 sm:w-28 lg:w-32">
+                    <p className="text-xs sm:text-sm">AERONÁUTICA</p>
+                  </div>
+                </a>
+              </div>
+                 
+              <div className="flex justify-center flex-wrap  text-white  items-center fle my-6 sm:my-8">
               </div>
 
               <div className="flex justify-center flex-wrap  text-white  items-center fle my-6 sm:my-8"></div>
@@ -247,10 +355,8 @@ export const HomeNaabol = () => {
             to="http://sare.naabol.gob.bo/ifis-appv3/public/metar"
             target="_blanck"
           >
-            <button
-              className="fixed bottom-40 right-0
-              p-3 bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500  text-white rounded-tl-lg z-10 text-lg md:text-2xl"
-            >
+            <button className="fixed bottom-72 right-0
+              p-3 bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500  text-white rounded-tl-lg z-10 text-sm md:text-2xl">
               <i className="bx bx-cloud-lightning "></i> Meta
             </button>
           </Link>

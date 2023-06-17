@@ -11,6 +11,47 @@ export const LoginPage = () => {
   const [alerta, setAlerta] = useState({});
   const { setAuth } = useAuth();
 
+    const navigate = useNavigate()
+    const [usuario, setUsuario] = useState('')
+    const [passport, setPassport] = useState('')
+    const [alerta, setAlerta] = useState({})
+    const {setAuth} =  useAuth()
+    
+    const handleSubmit = async(e) => {
+        console.log('enviado')
+        e.preventDefault();
+        console.log({usuario,passport})
+        if ([usuario, passport].includes('')) {
+            setAlerta({
+              msg: 'todos los campos son obligatorios',
+              error: true
+            })
+         
+            setTimeout(() => {
+                setAlerta({
+                   
+                    error:false
+                })
+            },3000)
+            
+            return;
+            
+        }
+        try {
+            const url = 'http://10.12.100.248:8000/api/login'
+            
+            try {
+                console.log(JSON.stringify(usuario, passport))
+                const response = await fetch(url, {
+                    method: 'POST',
+                    body: JSON.stringify({usuario, passport}),
+                    // data puede ser string o un objeto
+        
+                    headers: {
+                        'Content-Type': 'application/json'
+                        // Y le decimos que los datos se enviaran como JSON
+                    }
+                });
 
   const handleSubmit = async (e) => {
     console.log("enviado");
