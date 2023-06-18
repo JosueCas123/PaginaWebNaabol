@@ -1,9 +1,9 @@
 import React, { createContext, useEffect, useState } from 'react'
 import useAuth from '../hooks/useAuth'
 
-export const RecursosHContext = createContext()
+export const AeronauticaContex = createContext()
 
-export const RecursoProvider = ({children}) => {
+export const AeronauticaProvider = ({children}) => {
 
     const {auth} = useAuth()
     console.log(auth)
@@ -54,7 +54,7 @@ export const RecursoProvider = ({children}) => {
 
           try {
 
-            const url = 'http://127.0.0.1:8000/api/recursos';
+            const url = 'http://127.0.0.1:8000/api/aeronautica';
           
              const response = await fetch(url, {
               method: 'GET',
@@ -220,17 +220,17 @@ export const RecursoProvider = ({children}) => {
 
 
   return (
-    <RecursosHContext.Provider value={{
+    <AeronauticaContex.Provider value={{
         noticias,
-            setNoticias,
-            guardarNoticia,
-            eliminarNoticia,
-            setEdicion,
-            dataNoticia,
-            noticia,
-            
+        setNoticias,
+        guardarNoticia,
+        eliminarNoticia,
+        setEdicion,
+        dataNoticia,
+        noticia,
+
     }}>
         {children}
-    </RecursosHContext.Provider>
+    </AeronauticaContex.Provider>
   )
 }

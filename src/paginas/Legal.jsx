@@ -53,7 +53,7 @@ export const Legal = () => {
                         data={legal.imagen}
                         type="application/pdf"
                         width="80%"
-                        height="300px"
+                        height="500px"
                      >
                          <p>
                            No se puede mostrar el PDF.{" "}

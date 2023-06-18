@@ -160,7 +160,17 @@ export const Formulario = () => {
                     </div>
                         <div>
                             <label className='text-lg font-medium mr-3' htmlFor="">Priorida</label>
-                            {prioridad}
+                            <select 
+                                class="border-2 border-gray-300 border-r p-2" 
+                                value={selectValue}
+                                onChange={e => setSelectValue( e.target.value)}
+                            >
+                                 <option value="" selected disabled>Seleccionar opción</option>
+                                 <option value="1">Noticia Destacada</option>
+                                 <option value="2">Ultimas Noticias</option>
+               
+                
+                        </select>
                         </div>
                 </div>
                 <div class="mb-4 flex flex-col">

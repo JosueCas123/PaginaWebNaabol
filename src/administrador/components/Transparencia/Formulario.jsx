@@ -8,6 +8,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import { HeaderAdmin } from './HeaderAdmin';
 import { Sibear } from '../Sibear';
+import useTransparencia from '../../../hooks/useTransparencia';
+import useAeronautica from '../../../hooks/useAeronautica';
 
 export const Formulario = () => {
   const [titulo, setTitulo] = useState("");
@@ -16,7 +18,7 @@ export const Formulario = () => {
   const [alerta, setAlerta] = useState({});
 
   const [id, setId] = useState(null);
-  const { guardarNoticia, noticia } = useUser();
+  const { guardarNoticia, noticia } = useAeronautica();
 
   useEffect(() => {
     if (noticia?.titulo) {

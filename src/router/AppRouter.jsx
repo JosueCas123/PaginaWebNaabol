@@ -20,6 +20,10 @@ import { HomeCominicacion } from "../administrador/components/comunicacion/HomeC
 import { HomeLegal } from "../administrador/components/legal/HomeLegal.jsx";
 import { Legal } from "../paginas/Legal";
 import { HomeRecursosHumanos } from "../administrador/components/RecursosHumanos/HomeRecursosHumanos";
+import { FormularioRRHH } from "../administrador/components/RecursosHumanos/FormularioRRHH";
+
+import { HomeAeronautica } from "../administrador/components/Aeronautica/HomeAeronautica";
+import { HomeTrasparencia } from "../administrador/components/Transparencia/HomeTrasparencia";
 
 export const AppRouter = () => {
   return (
@@ -35,9 +39,12 @@ export const AppRouter = () => {
         <Route path="/Legal" element={<Legal/>} />
       
         <Route path="/Formulario" element={<Formulario/>} />
+        <Route path="/FormularioRRHH" element={<FormularioRRHH/>} />
         <Route path="/Comunicacion" element={<HomeCominicacion/>} />
         <Route path="/LegalAdmin" element={<HomeLegal/>} />
-        <Route path="RRHH" element={<HomeRecursosHumanos/>} />
+        <Route path="/RRHH" element={<HomeRecursosHumanos/>} />
+        <Route path="/Transpancia" element={<HomeTrasparencia/>} />
+        <Route path="/Aeronautica" element={<HomeAeronautica/>} />
 
 
         <Route path="/Aeropuerto" element={<Aeropuerto />} />
