@@ -21,7 +21,7 @@ export const NotiaPage = () => {
     navigate(-1);
   }
 
-  console.log(noticia)
+  // console.log(noticia)
 
   if (!noticia) {
     // Si no se encuentra la noticia con el ID especificado, puedes mostrar un mensaje de error o redireccionar al usuario a otra página.

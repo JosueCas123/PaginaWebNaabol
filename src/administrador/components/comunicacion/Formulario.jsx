@@ -17,7 +17,7 @@ export const Formulario = () => {
 
   const [id, setId] = useState(null);
   const { guardarNoticia, noticia } = useUser();
-
+  console.log(noticia)
   useEffect(() => {
     if (noticia?.titulo) {
       setTitulo(noticia.titulo);

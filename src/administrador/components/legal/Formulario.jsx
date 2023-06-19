@@ -16,27 +16,13 @@ export const Formulario = () => {
     const [descripcion, setDescripcion] = useState('');
     const [selectValue, setSelectValue] = useState('');
     const [alerta, setAlerta] = useState({})
-    const {userInfo} = useAuth()
+
 
     const [id, setId] = useState(null)
     const {guardarNoticia, noticia} = useLegal()
 
-
-    const prioridad = useMemo(() => {
-        return (userInfo.name === 'Comunicacion')
-            ? <select 
-            class="border-2 border-gray-300 border-r p-2" 
-            value={selectValue}
-            onChange={e => setSelectValue( e.target.value)}
-            >
-                <option value="" selected disabled>Seleccionar opción</option>
-                <option value="1">Noticia Destacada</option>
-                <option value="2">Ultimas Noticias</option>
-               
-                
-            </select>
-            :<></>
-    },[userInfo])
+    console.log(noticia)
+    
 
 
 
@@ -46,10 +32,7 @@ export const Formulario = () => {
                 setTitulo(noticia.titulo)
                 setDescripcion(noticia.descripcion)
                 setSelectValue(noticia.selectValue)
-                setId(noticia.id)
-               
-               
-               
+                setId(noticia.id)      
         }
       
     }, [noticia])

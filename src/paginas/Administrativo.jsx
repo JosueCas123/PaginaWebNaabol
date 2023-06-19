@@ -7,9 +7,10 @@ import useRecHumanos from "../hooks/useRecHumanos";
 export const Administrativo = () => {
 
  const {dataNoticia} =useRecHumanos()
+ 
  {/* */}
  const regionalNaNacional = dataNoticia.filter(Destacadas => Destacadas.prioridad === 1).map(Destacadas => Destacadas)
- console.log(regionalNaNacional)
+//  console.log(regionalNaNacional)
 
  {/* */}
  const regionalSantaCruz = dataNoticia.filter(Destacadas => Destacadas.prioridad === 2).map(Destacadas => Destacadas)
@@ -17,12 +18,12 @@ export const Administrativo = () => {
  const regionalLaPaz = dataNoticia.filter(Destacadas => Destacadas.prioridad === 3).map(Destacadas => Destacadas)
 
 
- console.log(regionalNaNacional)
- console.log(regionalSantaCruz)
- console.log(regionalLaPaz)
+//  console.log(regionalNaNacional)
+//  console.log(regionalSantaCruz)
+//  console.log(regionalLaPaz)
 
  const {titulo, descripcion, prioridad} = dataNoticia
- console.log(dataNoticia)
+//  console.log(dataNoticia)
 
   return (
     <>

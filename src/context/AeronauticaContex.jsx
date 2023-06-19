@@ -34,7 +34,7 @@ export const AeronauticaProvider = ({children}) => {
             })
             const {data} = await response.json()
 
-           console.log(data)
+          //  console.log(data)
 
              setNoticias(data)
 
@@ -65,7 +65,7 @@ export const AeronauticaProvider = ({children}) => {
             })
             const {data} = await response.json()
 
-          console.log(data)
+          // console.log(data)
 
           setDataNoticia(data)
 

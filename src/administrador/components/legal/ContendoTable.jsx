@@ -7,6 +7,7 @@ import useLegal from '../../../hooks/useLegal'
 export const ContendoTable = ({noticia}) => {
 
     const {eliminarNoticia, setEdicion} = useLegal()
+    console.log(setEdicion)
     const {titulo, fecha, descripcion, imagen, id} = noticia
 
     const newDescripcion = useMemo(() => {

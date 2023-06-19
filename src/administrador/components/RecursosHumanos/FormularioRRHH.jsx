@@ -8,8 +8,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import { HeaderAdmin } from './HeaderAdmin';
 
-import useRecHumanos from '../../../hooks/useRecHumanos';
+
 import { Sibear } from '../Sibear';
+import useRecHumanos from '../../../hooks/useRecHumanos';
 
 export const FormularioRRHH = () => {
 
@@ -28,7 +29,7 @@ export const FormularioRRHH = () => {
 
     useEffect(() => {
 
-        if (noticia?.nombre) {
+        if (noticia?.titulo) {
                 setNombre(noticia.nombre)
                 setCargo(noticia.cargo)
                 setSelectValue(noticia.selectValue)
@@ -80,6 +81,7 @@ export const FormularioRRHH = () => {
             imagen: base64Image,
             prioridad: selectValue
           };
+
           console.log(info)
          // console.log(base64)
   

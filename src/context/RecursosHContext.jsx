@@ -12,8 +12,8 @@ export const RecursoProvider = ({children}) => {
     const [dataNoticia, setDataNoticia] = useState([])
 
 
-    console.log(dataNoticia)
-    console.log(noticias)
+    // console.log(dataNoticia)
+    // console.log(noticias)
 
 
     useEffect(() => {

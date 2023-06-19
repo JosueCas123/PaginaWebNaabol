@@ -14,10 +14,10 @@ export const Noticias = () => {
   const noticiasDestacadas = dataNoticia.filter(Destacadas => Destacadas.prioridad === 1).map(Destacadas => Destacadas)
   const ultimaNoticia = dataNoticia.filter(Destacadas => Destacadas.prioridad === 2).map(Destacadas => Destacadas)
 
-  console.log(noticiasDestacadas)
-  console.log(ultimaNoticia)
+  // console.log(noticiasDestacadas)
+  // console.log(ultimaNoticia)
 
-  console.log(dataNoticia)
+  // console.log(dataNoticia)
 
   const {id} = dataNoticia
   

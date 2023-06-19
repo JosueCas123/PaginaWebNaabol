@@ -65,11 +65,11 @@ export const Sibear = () => {
     }, [userInfo])
 
 
-    console.log(legal)
-    console.log(comunicacion)
-    console.log(aeronautica)
+    // console.log(legal)
+    // console.log(comunicacion)
+    // console.log(aeronautica)
     
-    console.log(userInfo)
+    // console.log(userInfo)
 
 
     const handleOpenNav = () => {

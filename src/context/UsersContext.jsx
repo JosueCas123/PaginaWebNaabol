@@ -12,8 +12,8 @@ export const UsersProvider = ({children}) => {
     const [dataNoticia, setDataNoticia] = useState([])
 
 
-    console.log(dataNoticia)
-    console.log(noticias)
+    // console.log(dataNoticia)
+    // console.log(noticias)
 
 
     useEffect(() => {
@@ -34,7 +34,7 @@ export const UsersProvider = ({children}) => {
             })
             const {data} = await response.json()
 
-           console.log(data)
+          //  console.log(data)
 
              setNoticias(data)
 
@@ -65,7 +65,7 @@ export const UsersProvider = ({children}) => {
             })
             const {data} = await response.json()
 
-          console.log(data)
+          // console.log(data)
 
           setDataNoticia(data)
 
@@ -131,58 +131,7 @@ export const UsersProvider = ({children}) => {
         }
       };
 
-      /* cargos naabol */
-      const guardarCargos = async(noticia, id) => {
-
-        if (id) {
-          const urlEdit = `http://10.12.100.30:8000/api/noticia_update/${id}`
-            const token = localStorage.getItem('token');
-            try {
-              const response = await fetch(urlEdit, {
-                method: 'PUT',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(noticia)
-                })
-                const data = await response.json()
-
-                console.log(data.noticia)
-
-                const noticiaActualizada = noticias.map(noticiaState => noticiaState.id === data.id ? data : noticiaState)
-                setNoticias(noticiaActualizada)
-                //console.log(data)
-
-            } catch (error) {
-                console.log(error);
-            }
-
-        }else{
-          try {
-              const url = 'http://10.12.100.30:8000/api/noticia_create';
-          const token = localStorage.getItem('token');
-  
-             const response = await fetch(url, {
-              method: 'POST',
-              headers: {
-                  'Authorization': `Bearer ${token}`,
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(noticia)
-              })
-  
-              const data = await response.json()
-              console.log(data)
-              const {multimedia_id, ...NoticiasAlmacenadas} = data.noticia
-              console.log(NoticiasAlmacenadas)
-              setNoticias([...noticias, NoticiasAlmacenadas])
-  
-          } catch (error) {
-              console.log(error)
-          }
-        }
-      };
+     
 
 
     const setEdicion = (noticia) => {
