@@ -31,11 +31,11 @@ export const Header = () => {
             <Link
               target="_blank"
               className=" link text-white  "
-              to="https://www.facebook.com/"
+              to="https://www.instagram.com/naabolivia/?hl=es-la/"
             >
               <i className="bx bxl-instagram"></i>
             </Link>
-            <Link target="_blank" className="link text-white">
+            <Link target="_blank" to="https://facebook.com/naabolivia" className="link text-white">
               <i class="bx bxl-facebook"></i>
             </Link>
             <Link

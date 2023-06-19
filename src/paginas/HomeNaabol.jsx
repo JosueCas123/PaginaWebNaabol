@@ -42,27 +42,7 @@ export const HomeNaabol = () => {
 
             <div className="flex  flex-wrap  text-white  items-center flex-col ">
               <div className="flex justify-center flex-wrap  text-white  items-center sm:my-6 lg:my-8 ">
-                <Link to="">
-                  <a
-                    href=""
-                    className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
-                  >
-                    <div className=" ">
-                      <i className=" text-2xl p-1   bx bx-world  sm:text-4xl lg:text-6xl"></i>
-                    </div>
-                    <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
-                      <p
-                        className="text-xs sm:text-sm lg:text-base
-                      "
-                      >
-                        AERONÁUTICA
-                      </p>
-                      <p className="text-cyan-400 text-center lg:text-sm">
-                        Ver mas <i className="   bx bx-chevron-right"></i>
-                      </p>
-                    </div>
-                  </a>
-                </Link>
+              
 
                 <Link to="/Administrativa">
                   <a
@@ -150,27 +130,7 @@ export const HomeNaabol = () => {
                     </div>
                   </a>
                 </Link>
-                <Link to="">
-                  <a
-                    href=""
-                    className="w-36  bg-black rounded-xl h-16 flex  items-center justify-evenly m-3 p-2  sm:w-44 sm:h-24 sm:justify-around lg:w-52 lg:h-24"
-                  >
-                    <div className=" ">
-                      <i className=" text-2xl p-1   bx bx-id-card  sm:text-4xl lg:text-6xl"></i>
-                    </div>
-                    <div className=" text-xs w-24  flex   flex-col  rounded-xl    sm:p-2 sm:w-28 lg:w-32">
-                      <p
-                        className="text-xs sm:text-sm lg:text-base
-                      "
-                      >
-                        CREDENCIALES
-                      </p>
-                      <p className="text-cyan-400 text-center lg:text-sm">
-                        Ver mas <i className="   bx bx-chevron-right"></i>
-                      </p>
-                    </div>
-                  </a>
-                </Link>
+                
                 <Link to="/Maleta">
                   <a
                     href=""
@@ -254,16 +214,13 @@ export const HomeNaabol = () => {
           >
             <button className="fixed bottom-72 right-0
               p-3 bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500  text-white rounded-tl-lg z-10 text-sm md:text-2xl">
-              <i className="bx bx-cloud-lightning "></i> Meta
+              <i className="bx bx-cloud-lightning "></i> Metar
             </button>
           </Link>
         </div>
 
         <section className="lg:w-11/12 lg:mx-auto max-w-screen-2xl">
-          <CardGerencia />
-          <div>
-            <button>Ver mas..</button>
-          </div>
+        
           <div className='w-auto md:w-11/12 mt-5 mx-auto'>
                 <h2 className="text-xl font-semibold">Noticias destacadas</h2>
             <div className=" w-auto h-80 items-center my-10 overflow-x-auto overscroll-x-contain  space-x-6  flex justify-center md:flex md:space-x-5 box-border mx-auto hidden:space-y-5 overflow-hidden" id='Noticias_descatadas'>
