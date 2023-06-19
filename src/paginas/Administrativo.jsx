@@ -57,7 +57,7 @@ export const Administrativo = () => {
                 />
               </div>
               <div className=" flex flex-col  p-2 items-center -translate-y-10">
-                <h6 className="w-full text-center text-violet-600">{nacional.descripcion}</h6>
+                <h6 className="w-full text-center text-violet-600">{nacional.detalle}</h6>
                 <p className="text-center">
                   {nacional.titulo}
                 </p>
@@ -93,7 +93,7 @@ export const Administrativo = () => {
                 />
               </div>
               <div className=" flex flex-col  p-2 items-center -translate-y-10">
-                <h6 className="w-full text-center text-violet-600">{nacional.descripcion}</h6>
+                <h6 className="w-full text-center text-violet-600">{nacional.detalle}</h6>
                 <p className="text-center">
                   {nacional.titulo}
                 </p>
@@ -126,7 +126,7 @@ export const Administrativo = () => {
                 />
               </div>
               <div className=" flex flex-col  p-2 items-center -translate-y-10">
-                <h6 className="w-full text-center text-violet-600">{nacional.descripcion}</h6>
+                <h6 className="w-full text-center text-violet-600">{nacional.detalle}</h6>
                 <p className="text-center">
                   {nacional.titulo}
                 </p>

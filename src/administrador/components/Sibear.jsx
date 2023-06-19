@@ -1,8 +1,76 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { openNav } from '../helpers/navAdministrador';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 export const Sibear = () => {
+
+    const [legal, setLegal] = useState(false)
+    const [comunicacion, setComunicacion] = useState(false)
+    const [recursos, setRecursos] = useState(false)
+    const [transparencia, setTrasparencia] = useState(false)
+    const [aeronautica, setAeronautica] = useState(false)
+   
+    const {userInfo} = useAuth()
+    const {name} = userInfo
+
+
+    
+    {/*funcion para verificar si la areas y desabilitar las demas */}
+    const legalVerificacion = () => {
+       return(name === 'Legal') && setLegal(true)
+
+    }
+
+    const comunicacionVerificacion = () => {
+        return(name === 'Comunicacion') && setComunicacion(true)
+    }
+
+    const recursosHVerificacion = () => {
+        return(name === 'Recursos') && setRecursos(true)
+    }
+
+    const transparenciaVerificacion = () => {
+        return(name === 'Transparencia') && setTrasparencia(true)
+    }
+
+    const aeronauticaVerificacion = () => {
+        return(name === 'Aeronautica') && setAeronautica(true)
+    }
+
+    {/*useEffect para ver que cuando el componente se carga va verificando el area */}
+    useEffect(() => {
+        
+        legalVerificacion()
+    }, [userInfo])
+
+    useEffect(() => {
+        
+        comunicacionVerificacion()
+    }, [userInfo])
+
+    useEffect(() => {
+        
+        recursosHVerificacion()
+    }, [userInfo])
+
+    useEffect(() => {
+        
+        transparenciaVerificacion()
+    }, [userInfo])
+
+    useEffect(() => {
+        
+        aeronauticaVerificacion()
+    }, [userInfo])
+
+
+    console.log(legal)
+    console.log(comunicacion)
+    console.log(aeronautica)
+    
+    console.log(userInfo)
+
 
     const handleOpenNav = () => {
         openNav();
@@ -26,7 +94,7 @@ export const Sibear = () => {
                   </svg>                      
             </div>
         </div >
-            <div className = "text-white hover:text-blue-500 dark:hover:text-[#38BDF8]">
+            <div  className = "text-white hover:text-blue-500 dark:hover:text-[#38BDF8]">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
                 </svg>
@@ -45,8 +113,11 @@ export const Sibear = () => {
     </div>
   
     <div className= "max hidden text-white mt-20 flex-col space-y-2 w-full h-[calc(100vh)]">
-        <Link to="/Administrador">
-            <div className =  "hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+        <Link 
+            to="/Administrador"
+          
+        >
+            <div  className =  "hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                 </svg>    
@@ -55,63 +126,61 @@ export const Sibear = () => {
                 </div>
             </div>
         </Link>
+            <Link to={!comunicacion ? '#' : '/Comunicacion'}>
+        <div className="hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            </svg>
+            <div>
+            {!comunicacion ? 'Área Comunicación (No esta autorizado)' : 'Área Comunicación'}
+            </div>
+        </div>
+        </Link>
+
+            <Link to={!recursos ? '#' : '/RRHH'}>
+        <div className="hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            </svg>
+            <div>
+            {!recursos ? 'Área Recursos Humanos (No esta autorizado)' : 'Área Recursos Humanos'}
+            </div>
+        </div>
+        </Link>
+           
             <Link
-                to="/Comunicacion"
+                to={!legal ? "#" :"/LegalAdmin" } 
             > 
                 <div className =  "hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                     </svg>                      
                     <div>
-                    Area Comunicacion
+                    {!legal ? 'Área Legal (No esta autorizado)' : 'Área Legal'}
                     </div>
                 </div>
             </Link>
             <Link
-                to="/RRHH"
+                to={!transparencia ? "#" :"/Transpancia" } 
             > 
                 <div className =  "hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                     </svg>                      
                     <div>
-                        Recurosos Humanos
+                    {!transparencia ? "Area Transparencia (No esta autorizado)": "Area Transparencia"}
                     </div>
                 </div>
             </Link>
             <Link
-                to="/LegalAdmin"
+                to={!aeronautica ? "#" : "/Aeronautica"}
             > 
                 <div className =  "hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                     </svg>                      
                     <div>
-                    Legal
-                    </div>
-                </div>
-            </Link>
-            <Link
-                to="/Transpancia"
-            > 
-                <div className =  "hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                    </svg>                      
-                    <div>
-                    Transparencia
-                    </div>
-                </div>
-            </Link>
-            <Link
-                to="/Aeronautica"
-            > 
-                <div className =  "hover:ml-4 w-full text-white hover:text-purple-500 dark:hover:text-blue-500 bg-[#1E293B] p-2 pl-8 rounded-full transform ease-in-out duration-300 flex flex-row items-center space-x-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                    </svg>                      
-                    <div>
-                    Aeronautica
+                    {!aeronautica ? "Area Aeronautica (No esta autorizado)": "Area Aeronautica"}
                     </div>
                 </div>
             </Link>
