@@ -2,13 +2,18 @@ import React, { useMemo } from 'react'
 import useUser from '../../../hooks/useUser'
 import { Link } from 'react-router-dom'
 import { formatearFecha } from '../../../helpers/fechaFormateada'
-import useRecHumanos from '../../../hooks/useRecHumanos'
+import useAeronautica from '../../../hooks/useAeronautica'
 
 export const ContendoTable = ({noticia}) => {
-    console.log(noticia)
-    const {eliminarNoticia, setEdicion} = useRecHumanos()
+
+    const {eliminarNoticia, setEdicion} = useAeronautica()
     const {titulo, fecha, descripcion, imagen, id} = noticia
 
+    const newDescripcion = useMemo(() => {
+        return descripcion.length > 30
+            ? descripcion.substring(0,30) + '......'
+            :descripcion
+    },[descripcion])
 
   return (
   <>
@@ -27,12 +32,12 @@ export const ContendoTable = ({noticia}) => {
            </td>
            <td class="flex justify-center items-center">
                <div class="">
-                <img className='w-20' src={imagen} alt="" />
+               <img className=' w-20 bg-cover bg-center items-center' src={imagen}  alt=""/>
                </div>
            </td>
            <td class="">
                <p class=" font-medium">
-               {descripcion}
+               {newDescripcion}
                </p>
            </td>
            <td class="w-10 text-center space-y-1">

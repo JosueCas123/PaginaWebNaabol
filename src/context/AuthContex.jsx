@@ -20,7 +20,7 @@ export const AuthProvider = ({children}) => {
           }
           try {
             const token = localStorage.getItem('token')
-            const url = 'http://10.12.100.30:8000/api/user'
+            const url = 'http://127.0.0.1:8000/api/user'
             const response = await fetch(url, {
                 method: 'GET',
                 headers: {

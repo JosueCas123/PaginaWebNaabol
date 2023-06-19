@@ -11,7 +11,7 @@ export const Aeropuerto = () => {
           <h2 className="text-3xl my-2 lg:text-5xl text-center">
             Navegacion Aerea de Aerepuertos Bolivianos
           </h2>
-          <p className="text-xl my-2 md: lg:text-3xl text-center">
+          <p className="text- my-2 md: lg:text-3xl text-center">
             Aeropueto Internacional del de Viru Viru
           </p>
         </div>
@@ -19,37 +19,37 @@ export const Aeropuerto = () => {
       {/* */}
 
       <section className="py-5 w-11/12 mx-auto max-w-screen-2xl">
-        <div className="font-bold text-xl text-center sm:text-2xl  lg:text-3xl lg:text-left">
+        <div className="font-bold text-sm text-center sm:text-sm  lg:text-xl lg:text-left">
           INFORMACION DEL PASAJERO
         </div>
         <div className="my-9 lg:flex lg:justify-around lg:items-center">
           <div className="my-7 bg-blue-900 w-full h-56 rounded-3xl text-white p-7 flex flex-col justify-around  sm:h-44 lg:w-1/3  ">
             <div className="flex justify-around font text-2xl my-3 ">
-              <p className="font-bold">
-                <i className="bx bx-wifi  mx-4"></i>WIFI
+              <p className="font-bold text-xl">
+                <i className="bx bx-wifi mx-4"></i>WIFI
               </p>
-              <p className="font-bold">
+              <p className="font-bold text-xl">
                 <i className=" bx bx-home mx-4"> </i> Gratuito
               </p>
             </div>
-            <div className="text-center sm:text-xl">
+            <div className="text-center sm:text-sm">
               <p>
                 NAABOL proporciona el servicio de internet gratis dentro de sus
                 aeropuetos
               </p>
             </div>
           </div>
-          <div className="bg-blue-900 w-full h-56 rounded-3xl text-white p-7 my-3 justify-around sm:h-56 lg:w-2/5 ">
-            <h4 className="text-center text-xl my-2 font-bold">TARIFAS</h4>
+          <div className="bg-blue-900 w-full h-48 rounded-3xl text-white p-7 my-3 justify-around sm:h-48 lg:w-2/5">
+            <h4 className="text-center text-sm my-2 font-bold">TARIFAS</h4>
             <div className="flex items-center justify-between my-2 sm:justify-evenly sm:text-xl">
               <div className="">
                 <i className="text-4xl sm:text-4xl bx bxs-car"></i>
               </div>
               <div className="">
-                <p className="font-bold">VEHICULOS DE CUATRO RUEDAS</p>
+                <p className="font-bold text-sm">VEHICULOS DE CUATRO RUEDAS</p>
                 <div className="flex ">
-                  <p className="font-bold">PRECIO : </p>
-                  <p className="">BS 10:00</p>
+                  <p className="font-bold text-sm">PRECIO : </p>
+                  <p className="text-sm">BS 10:00</p>
                 </div>
               </div>
             </div>
@@ -58,9 +58,9 @@ export const Aeropuerto = () => {
                 <i className="text-4xl sm:text-4xl bx bx-cycling "></i>
               </div>
               <div className="">
-                <p className="font-bold">VEHICULOS DE DOS RUEDAS</p>
+                <p className="font-bold text-sm">VEHICULOS DE DOS RUEDAS</p>
                 <div className="flex ">
-                  <p className="font-bold">PRECIO : </p>
+                  <p className="font-bold text-sm">PRECIO : </p>
                   <p>BS 10:00</p>
                 </div>
               </div>

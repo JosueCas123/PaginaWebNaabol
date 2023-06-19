@@ -1,14 +1,15 @@
 import React from 'react'
 import useUser from '../../../hooks/useUser'
 import { ContendoTable } from './ContendoTable'
-import useRecHumanos from '../../../hooks/useRecHumanos'
+import useTransparencia from '../../../hooks/useTransparencia'
+import useAeronautica from '../../../hooks/useAeronautica'
 
 
 
 
 export const Table = () => {
 
-    const {noticias} = useRecHumanos()
+    const {noticias} = useAeronautica()
     console.log(noticias)
 
   return (
@@ -20,9 +21,9 @@ export const Table = () => {
                 <thead>
                     <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal ">
                          <th class="py-3 px-6  text-center">FECHA</th>
-                         <th class="py-3 px-6 text-center">NOMBRE</th>
+                         <th class="py-3 px-6 text-center">TITULO</th>
                          <th class="py-3 px-6 text-center">IMGEN</th>
-                         <th class="py-3 px-6 text-center">CARGO</th>
+                         <th class="py-3 px-6 text-center">DESCRIPCION</th>
                          <th class="py-3 px-6 text-center">ACCION</th>
                     </tr>
                 </thead>

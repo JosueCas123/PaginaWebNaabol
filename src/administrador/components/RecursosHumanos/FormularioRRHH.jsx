@@ -7,13 +7,14 @@ import { CardInfo } from './CardInfo';
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import { HeaderAdmin } from './HeaderAdmin';
-import { Sibear } from './Sibear';
+
 import useRecHumanos from '../../../hooks/useRecHumanos';
+import { Sibear } from '../Sibear';
 
-export const Formulario = () => {
+export const FormularioRRHH = () => {
 
-    const [titulo, setTitulo] = useState('');
-    const [descripcion, setDescripcion] = useState('');
+    const [nombre, setNombre] = useState('');
+    const [cargo, setCargo] = useState('');
     const [selectValue, setSelectValue] = useState('');
     const [alerta, setAlerta] = useState({})
     const {userInfo} = useAuth()
@@ -22,29 +23,14 @@ export const Formulario = () => {
     const {guardarNoticia, noticia} = useRecHumanos()
 
 
-    const prioridad = useMemo(() => {
-        return (userInfo.name === 'Comunicacion')
-            ? <select 
-            class="border-2 border-gray-300 border-r p-2" 
-            value={selectValue}
-            onChange={e => setSelectValue( e.target.value)}
-            >
-                <option value="" selected disabled>Seleccionar opción</option>
-                <option value="1">Noticia Destacada</option>
-                <option value="2">Ultimas Noticias</option>
-               
-                
-            </select>
-            :<></>
-    },[userInfo])
 
 
 
     useEffect(() => {
 
-        if (noticia?.titulo) {
-                setTitulo(noticia.titulo)
-                setDescripcion(noticia.descripcion)
+        if (noticia?.nombre) {
+                setNombre(noticia.nombre)
+                setCargo(noticia.cargo)
                 setSelectValue(noticia.selectValue)
                 setId(noticia.id)
                
@@ -61,7 +47,7 @@ export const Formulario = () => {
   
   
         
-        if (titulo === '' || descripcion === '' || selectValue === '') {
+        if (nombre === '' || cargo === '' || selectValue === '') {
           setAlerta({
             msg: 'todos los campos son obligatorios',
             error: true
@@ -89,8 +75,8 @@ export const Formulario = () => {
           const base64Image = reader.result;
     
           const info = {
-            titulo: titulo,
-            descripcion: descripcion,
+            titulo: nombre,
+            descripcion: cargo,
             imagen: base64Image,
             prioridad: selectValue
           };
@@ -113,8 +99,8 @@ export const Formulario = () => {
         }
         reader.readAsDataURL(imagen);
           
-        setTitulo('')
-        setDescripcion('')
+        setNombre('')
+        setCargo('')
         setSelectValue('')
         imagenInput.value = ''
       }
@@ -131,18 +117,18 @@ export const Formulario = () => {
 
          <CardInfo/>
         <div style={{ overflowX: 'auto' }} className='w-3/5 shadow-lgflex flex-col justify-center items-center content  transform ease-in-out duration-500 ml-20 p-5 xl:ml-72 xl:mt-20  shadow-xl  lx:p-16'>
-        <h2 className=" font-extrabold xl:text-xl  ">Nueva Noticia</h2>
+        <h2 className=" font-extrabold xl:text-xl  ">Nueva </h2>
 
         <form onSubmit={handleSubmit}>
                 <div class="mb-4">
-                    <label class="text-xl  font-medium mt-10">Titulo<span class="text-red-500">*</span></label>
+                    <label class="text-xl  font-medium mt-10">nombre<span class="text-red-500">*</span></label>
                     <input 
                         type="text" 
                         class="border-2 border-gray-300 p-2 w-full " 
-                        placeholder='Ingrese un titulo'
-                        name="titulo" 
-                        value={titulo}
-                        onChange={e => setTitulo( e.target.value)}
+                        placeholder='Ingrese un nombre'
+                        name="nombre" 
+                        value={nombre}
+                        onChange={e => setNombre( e.target.value)}
                         id="title" 
                         
                     />
@@ -159,18 +145,29 @@ export const Formulario = () => {
                             />
                     </div>
                         <div>
-                            <label className='text-lg font-medium mr-3' htmlFor="">Priorida</label>
-                            {prioridad}
-                        </div>
+                            <label className='text-lg font-medium mr-3' htmlFor="">Regional</label>
+                            <select 
+                                class="border-2 border-gray-300 border-r p-2" 
+                                value={selectValue}
+                                onChange={e => setSelectValue( e.target.value)}
+                            >
+                                 <option value="" selected disabled>Seleccionar opción</option>
+                                 <option value="1">Regional General Nacional</option>
+                                 <option value="2">Regional Santa Cruz</option>
+                                 <option value="3">Regional La Paz</option>
+               
+                
+                        </select>
+                    </div>
                 </div>
                 <div class="mb-4 flex flex-col">
-                    <label class="text-lg font-medium mr-3">Description</label>
+                    <label class="text-lg font-medium mr-3">Cargo</label>
                     <textarea 
                         name="content" 
                         class="border-2 border-gray-500"
                         placeholder='Ingrese una descripcion'
-                        value={descripcion}
-                        onChange={e => setDescripcion( e.target.value)}
+                        value={cargo}
+                        onChange={e => setCargo( e.target.value)}
                     >
 
                     </textarea> 

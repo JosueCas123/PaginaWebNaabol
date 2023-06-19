@@ -32,7 +32,7 @@ export const LoginPage = () => {
       return;
     }
     try {
-      const url = "http://10.12.100.30:8000/api/login";
+      const url = "http://127.0.0.1:8000/api/login";
 
       try {
         console.log(JSON.stringify(usuario, passport));

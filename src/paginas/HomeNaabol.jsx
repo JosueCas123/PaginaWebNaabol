@@ -234,6 +234,11 @@ export const HomeNaabol = () => {
                     </div>
                   </a>
                 </Link>
+              
+              
+              </div>
+                 
+              <div className="flex justify-center flex-wrap  text-white  items-center fle my-6 sm:my-8">
               </div>
 
               <div className="flex justify-center flex-wrap  text-white  items-center fle my-6 sm:my-8"></div>
@@ -247,10 +252,8 @@ export const HomeNaabol = () => {
             to="http://sare.naabol.gob.bo/ifis-appv3/public/metar"
             target="_blanck"
           >
-            <button
-              className="fixed bottom-40 right-0
-              p-3 bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500  text-white rounded-tl-lg z-10 text-lg md:text-2xl"
-            >
+            <button className="fixed bottom-72 right-0
+              p-3 bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500 from-indigo-500 via-purple-500 to-pink-500  text-white rounded-tl-lg z-10 text-sm md:text-2xl">
               <i className="bx bx-cloud-lightning "></i> Meta
             </button>
           </Link>

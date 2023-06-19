@@ -7,6 +7,8 @@ import { AuthProvider } from './context/AuthContex'
 import { UsersProvider } from './context/UsersContext'
 import { LegalAdimnProvider } from './context/LegalAdimn'
 import { RecursoProvider } from './context/RecursosHContext'
+import { TransparenciaProvider } from './context/TransparenciaContex'
+import { AeronauticaProvider } from './context/AeronauticaContex'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,7 +17,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <UsersProvider>
         <LegalAdimnProvider>
           <RecursoProvider>
-            <AppNaabol/>
+            <TransparenciaProvider>
+              <AeronauticaProvider>
+                <AppNaabol/>
+              </AeronauticaProvider>
+            </TransparenciaProvider>
           </RecursoProvider>
         </LegalAdimnProvider>
         </UsersProvider>
